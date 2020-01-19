@@ -8,7 +8,7 @@ layout: page
 
 <p>I find programming an amazing way to exercise my problem solving skills and I'm always excited about learning new technologies.</p>
 
-<p>I enjoy teaming up with like-minded individuals in bringing the craziest ideas to life and contributing to open-source projects. I believe nothing really interesting is ever built alone!</p>
+<p>I enjoy teaming up with like-minded individuals in bringing the craziest ideas to life, solving problems and contributing to open-source projects.</p>
 
 <p>In my free time, you will find me playing video games, playing football, rock climbing, cycling and doing some photography. I also like foreign languages and am currently putting a lot of effort into becoming fluent in German.</p>
 
