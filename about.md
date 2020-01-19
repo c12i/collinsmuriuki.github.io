@@ -4,11 +4,11 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>I am a full-stack developer from Nairobi, Kenya and a massive tech enthusiast, obsessed about the latest hardware and software trends.</p>
+<p>How's it going? I am a full-stack developer from Nairobi, and a massive tech enthusiast, obsessed about the latest hardware and software trends.</p>
 
 <p>I find programming an amazing way to exercise my problem solving skills and I'm always excited about learning new technologies.</p>
 
-<p>I enjoy teaming up with like-minded individuals in coming up with amazing creations, solving problems and contributing to open-source projects.</p>
+<p>I enjoy teaming up with like-minded individuals in bringing the craziest ideas to life, solving problems and contributing to open-source projects.</p>
 
 <p>In my free time, you will find me playing video games, reading fictional books, rock climbing, cycling and doing some photography.</p>
 
