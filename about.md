@@ -10,7 +10,7 @@ layout: page
 
 <p>I enjoy teaming up with like-minded individuals in bringing the craziest ideas to life, solving problems and contributing to open-source projects.</p>
 
-<p>In my free time, you will find me playing video games, reading books, playing football, cycling and doing some photography. I also like foreign languages and am currently putting a lot of effort into becoming fluent in German.</p>
+<p>In my free time, you will find me playing video games, reading novels, watching football, cycling and doing some photography. I also like foreign languages and am currently putting a lot of effort into becoming fluent in German.</p>
 
 <h2>Skills</h2>
 
