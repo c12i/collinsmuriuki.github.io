@@ -342,7 +342,7 @@ In the src directory, we add an index.js, which will serve as the entry point to
 
 _app/src/index.js_
 
-```JavaScript
+```javascript
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App.js";
