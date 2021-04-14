@@ -1,5 +1,5 @@
 ---
-title: "How to build with Web Assembly"
+title: "Building a Web Assembly powered password generator"
 layout: post
 date: 2020-10-24 22:44
 image: /assets/images/rust-ferris.jpeg
@@ -12,7 +12,7 @@ tag:
 star: true
 category: blog
 author: collinsmuriuki
-description: Building a simple npm package with Rust and Web Assembly and testing it out on a React application.
+description: Building a Web Assembly powered password generator with rust-wasm and React.js.
 ---
 
 In this tutorial, we will be building a simple npm package with Rust and Web Assembly and testing it out on a React application.
