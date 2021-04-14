@@ -147,13 +147,11 @@ First thing we want to do first is add an external crate to our project.
 
 Installing external libraries or crates, as they are referred to in the Rust community, is as easy as specifying the name and version of the library we would like to use under the dependencies column of our Cargo.toml like so:
 
+_Cargo.toml_
+
 ```toml
-Cargo.toml
-
 [dependencies]
-
 wasm-bindgen = "0.2.63"
-
 rand = { version = "0.7.3", features = ["wasm-bindgen"] }
 ```
 
