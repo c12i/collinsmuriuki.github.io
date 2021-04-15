@@ -134,4 +134,5 @@ exclude:
     "FAQ.md",
     "node_modules",
     "vendor",
+    "sync.sh"
   ]
