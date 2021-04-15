@@ -533,6 +533,6 @@ Here are some good resources if you wish to learn more about Rust and Web Assemb
 
 -   For experienced Rust developers who would like to dip their toes into Web Assembly, consider checking out [the rustwasm book](https://rustwasm.github.io/docs/book/)
 
--   [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) is another awesome resource I recommend going through, the content is extensive with good working examples.
+-   [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/introduction.html) is another awesome resource I recommend going through, the content is extensive with good working examples.
 
--   [Wasm by example](https://rustwasm.github.io/docs/book/) and webassembly.org are also great resources for learning more about Web Assembly in general.
+-   [Wasm by example](https://wasmbyexample.dev/home.en-us.html) and webassembly.org are also great resources for learning more about Web Assembly in general.
