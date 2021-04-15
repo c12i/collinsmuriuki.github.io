@@ -525,14 +525,14 @@ Our simple password generator is working!
 
 There's so much more we can do with Rust and Web Assembly, we have barely scratched the surface! This tutorial hopefully shows how we transition from Rust to JavaScript through Web Assembly, and how we can implement a Web Assembly generated npm package on a React application.
 
-A full working implemtation of this project can be found [here](https://wasm-pass.gq).
+A full working implementation of this project can be found [here](https://wasm-pass.gq).
 
 Here are some good resources if you wish to learn more about Rust and Web Assembly:
 
 -   [The Rust Book](https://doc.rust-lang.org/book/) is the go to resource if you wish to familiarize yourself with the Rust programming language
 
--   For experienced Rust developers who would like to dip their toes into Web Assembly, consider checking out [the rustwasm book](rustwasm.github.io/docs/book/)
+-   For experienced Rust developers who would like to dip their toes into Web Assembly, consider checking out [the rustwasm book](https://rustwasm.github.io/docs/book/)
 
 -   [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) is another awesome resource I recommend going through, the content is extensive with good working examples.
 
--   [Wasm by example](rustwasm.github.io/docs/book/) and webassembly.org are also great resources for learning more about Web Assembly in general.
+-   [Wasm by example](https://rustwasm.github.io/docs/book/) and webassembly.org are also great resources for learning more about Web Assembly in general.
