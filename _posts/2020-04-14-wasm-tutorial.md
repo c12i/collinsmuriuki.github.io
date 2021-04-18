@@ -372,7 +372,6 @@ _app/.babelrc_
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"]
 }
-
 ```
 
 We proceed to add a `webpack.config.js` file also at the root of our app directory (don't worry too much about it's content):
