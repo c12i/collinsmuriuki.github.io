@@ -6,10 +6,14 @@ layout: page
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
 <p>
-I enjoy writing software and solving problems in Typescript/ JavaScript, Python and Rust. I am driven by curiosity and the urge to understand the inner workings of any software I interact with. Currently, my main interests lie in web technologies, distributed systems and cryptocurrencies.
+I am a software developer who enjoys writing programs and solving problems in the cleanest, most simplistic and scalable way possible. I am driven by curiosity and the urge to understand the inner workings of any software I interact with, therefore I am constantly learning something new every day. I generally love tech, but at the moment, my primary interests lie in web technologies, distributed systems and cryptocurrencies.
 </p>
 
-<h2>Skills</h2>
+<p>
+On the side, I am an avid gamer with PC being my platform of choice, first person shooters and role playing games are my cup of tea. Other activities I engage in during my free time are cycling, indoor rock climbing, reading fictional/ non-fictional books and learning foreign languages.
+</p>
+
+<h2>What I'm good at</h2>
 
 <ul class="skill-list">
 	<li>JavaScript / TypeScript</li>
