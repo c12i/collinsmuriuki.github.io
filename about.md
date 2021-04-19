@@ -6,7 +6,7 @@ layout: page
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
 <p>
-Hi, my name is Collins Muriuki and I am a software developer from Nairobi, Kenya. I enjoys writing code and solving problems in the cleanest, most simplistic and scalable way possible. Curiosity and the urge to understand the inner workings of any software I interact with are my main driving forces, therefore I am constantly learning something new every day. I generally love tech, but at the moment, my primary interests lie in web technologies, distributed systems and cryptocurrencies.
+Hi, my name is Collins Muriuki and I am a software developer from Nairobi, Kenya. I enjoy writing code and solving problems in the cleanest, most simplistic and scalable way possible. Curiosity and the urge to understand the inner workings of any software I interact with are my main driving forces, therefore I am constantly learning something new every day. I generally love tech, but at the moment, my primary interests lie in web technologies, distributed systems and cryptocurrencies.
 </p>
 
 <!-- <p>
