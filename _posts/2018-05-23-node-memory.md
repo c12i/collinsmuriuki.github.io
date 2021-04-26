@@ -1,5 +1,5 @@
 ---
-title: "Increase Node.js memory limit"
+title: "How to squeeze out extra memory for your Node.js application"
 layout: post
 date: 2018-05-23 19:00
 headerImage: false

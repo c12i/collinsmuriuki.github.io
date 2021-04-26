@@ -1,6 +1,6 @@
 # main text of home
 name: Collins Muriuki
-bio: Software Engineer
+bio: Software Engineer | Digital Minimalist
 
 # twitter summary info
 description: Understanding the universe and explaining it to a three year old.
@@ -12,7 +12,7 @@ picture: assets/images/profile.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
-resume: false
+resume: true
 resume-external: true
 resume-url: https://keybase.pub/collinsmuriuki/docs/collins-muriuki-latest.pdf
 
