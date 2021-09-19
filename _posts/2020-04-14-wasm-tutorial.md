@@ -17,7 +17,7 @@ description: Building a Web Assembly powered password generator with rust-wasm a
 
 In this tutorial, we will be building a simple npm package with Rust and Web Assembly and testing it out on a React application.
 
-## A little context before we start
+## Some context
 
 Over the past few years, a popular trend in web development is emerging where developers write code in low level languages and compile it to a format that can be executed on the browser alongside JavaScript. That’s the high-level concept behind Web Assembly.
 
@@ -49,7 +49,7 @@ wasm-pack new wasm_pass
 
 The outcome of running this is basically a Cargo generated Rust library crate with web-assembly batteries included. This means we are still able to add external crates/ libraries into the generated project, something we will get to later on.
 
-## Breaking down the boilerplate
+## Dissecting the boilerplate
 
 Let’s enter into our project and see what we have:
 
@@ -139,7 +139,7 @@ The package.json file contains meta-data about the generated JavaScript and WebA
 }
 ```
 
-# Now to the fun stuff
+# Writing some Rust
 
 ## Adding an external crate
 
@@ -270,7 +270,7 @@ Our tests are successful! We are also able to see our random password printed ou
 wasm-pack build
 ```
 
-## NOTE 🚨
+## Note!
 
 Incase you run into a very long error message reminding you to disable wasm-opt while attempting to compile your code, you can fix it by updating your Cargo.toml with the following:
 
@@ -285,7 +285,7 @@ This will disable wasm-pack Web Assembly optimization for the release profile, w
 
 You can then proceed to build your package again.
 
-## Implementing Web Assembly on a React app
+## Implementing Web Assembly on a React application
 
 We are now going to try out our new package on a bare-bones React application to see the integration of Web Assembly and modern front-end technologies at play.
 
@@ -330,7 +330,7 @@ _app/index.html_
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>wasm-pass</title>
   </head>
   <body>
     <div id='root'>
@@ -472,7 +472,7 @@ Let's now update our App component:
 _app/src/App.js_
 
 ```javascript
-import React, { useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 
 const wasm = import("wasm-pass");
 
@@ -484,19 +484,19 @@ const App = () => {
         setInput(e.target.value);
     };
 
-    const handleClick = () => {
-        wasm.then((wp) => {
-            setPassword(wp.generate(parseInt(input)));
-        }).catch((err) => {
-            alert(err.toString());
-        });
-    };
+    const generatePassword = useCallback(async (length) => {
+        const { generate } = await import("wasm-pass")
+        setPassword(generate(parseInt(length)))
+    }, [input]);
 
+    useEffect(() => {
+        generatePassword(input)
+    }, [input]);
     return (
         <div>
             <p>Enter password length:</p>
             <input type="number" onChange={handleChange} value={input} />
-            <button onClick={handleClick}>Generate Password</button>
+            <button onClick={() => generatePassword(input)}>Generate Password</button>
             <p>Your password:</p>
             <strong>{password}</strong>
         </div>
@@ -506,11 +506,19 @@ const App = () => {
 export default App;
 ```
 
-There are a couple of important changes in this file. First, we import the `useState` hook from react for simple state management. We also import our `wasm-pass` package. Notice how we use the `import` function rather than the regular ES6 `import` syntax. This is because currently, we cannot load Web Assembly asynchronously. This import function will return a promise, therefore to gain access to our wasm-pass module, we will need to call wasm.then.
+There are a couple of important changes in this file. First, we import the `useState`, `useCallback` and `useEffect` hooks from react for simple state management, memoization and performing of side effects.
 
-This component also contains an input field for entering the desired length of the password and a button whose click event is handled by our `handleClick` callback. Inside this callback, we make a call to our generate function which in turn updates the password state. Any errors caught during this process will be sent out as an alert. The final password is displayed in a `strong` tag.
+This component also contains an input field for entering the desired length of the password and a button whose click event is handled by our `generatePassword` callback.
 
-Let's run our dev server once again and see if everything works:
+We create our `generatePassword` callback using React's `useCallback` hook to memoize the password generation logic from web assembly. We also import our `wasm-pass` package here. Notice how we use the `import` function rather than the regular ES6 `import` syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a `Promise`, therefore to gain access to our `wasm-pass` module, we will need to `await` the `Promise`.
+
+Inside this callback, we make a call to our `generate` function from our wasm module which in turn updates the password state via the `setPassword` function call. We also call `parseInt` to cast our numeric string `input` to a number.
+
+We also call the `useEffect` hook and subscribe to any changes to our input state, where we call our  `generatePassword` function as a side effect.
+
+The final password is displayed in a `strong` tag. 
+
+Let's run our dev server once again and see what we get:
 
 ```shell
 npm start
@@ -524,7 +532,7 @@ Our simple password generator is working!
 
 There's so much more we can do with Rust and Web Assembly, we have barely scratched the surface! This tutorial hopefully shows how we transition from Rust to JavaScript through Web Assembly, and how we can implement a Web Assembly generated npm package on a React application.
 
-A full working implementation of this project can be found [here](https://wasm-pass.gq).
+A full working implementation of this project can be found [here](https://wasm-pass.collinsmuriuki.xyz).
 
 Here are some good resources if you wish to learn more about Rust and Web Assembly:
 
