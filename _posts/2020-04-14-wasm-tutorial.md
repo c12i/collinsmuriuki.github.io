@@ -510,9 +510,9 @@ This component also contains an input field for entering the desired length of t
 
 We create our `generatePassword` callback using React's `useCallback` hook to memoize the password generation logic from web assembly. We also import our `wasm-pass` package here. Notice how we use the `import` function rather than the regular ES6 `import` syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a `Promise`, therefore to gain access to our `wasm-pass` module, we will need to `await` the `Promise`.
 
-Inside this callback, we make a call to our `generate` function from our wasm module which in turn updates the password state via the `setPassword` function call. We also call `parseInt` to cast our numeric string `input` to a number.
+Inside this callback, we make a call to our `generate` function from our wasm module which in turn updates the password state via `setPassword`. We also call `parseInt` to cast our numeric string `input` to a number.
 
-We also call the `useEffect` hook and subscribe to any changes to our input state, where we call our  `generatePassword` function as a side effect.
+Finally, we call the `useEffect` hook and subscribe to any changes to our input state, where we call our  `generatePassword` function as a side effect.
 
 The final password is displayed in a `strong` tag. 
 
