@@ -482,9 +482,13 @@ const App = () => {
         setInput(e.target.value);
     };
 
-    const generatePassword = useCallback(async (length) => {
-        const { generate } = await import("wasm-pass")
-        setPassword(generate(parseInt(length)))
+    const generatePassword = useCallback(() => {
+        const module = import("wasm-pass")
+        module.then(({generate}) => {
+            setPassword(generate(parseInt(input)))
+        }).catch(err => {
+            alert(err.toString())
+        })
     }, [input]);
 
     useEffect(() => {
@@ -493,8 +497,8 @@ const App = () => {
     return (
         <div>
             <p>Enter password length:</p>
-            <input type="number" onChange={handleChange} value={input} />
-            <button onClick={() => generatePassword(input)}>Generate Password</button>
+            <input onChange={handleChange} type="number" value={input} />
+            <button onClick={generatePassword}>Generate Password</button>
             <p>Your password:</p>
             <strong>{password}</strong>
         </div>
@@ -508,9 +512,9 @@ There are a couple of important changes in this file. First, we import the `useS
 
 This component also contains an input field for entering the desired length of the password and a button whose click event is handled by our `generatePassword` callback.
 
-We create our `generatePassword` callback using React's `useCallback` hook to memoize the password generation logic from web assembly. We also import our `wasm-pass` package here. Notice how we use the `import` function rather than the regular ES6 `import` syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a `Promise`, therefore to gain access to our `wasm-pass` module, we will need to `await` the `Promise`.
+We create our `generatePassword` callback using React's `useCallback` hook to memoize the password generation logic from web assembly. We also import our `wasm-pass` package here. Notice how we use the `import` function rather than the regular ES6 `import` syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a `Promise`, therefore to gain access to our `wasm-pass` module, we use the `Promise.then` syntax.
 
-Inside this callback, we make a call to our `generate` function from our wasm module which in turn updates the password state via `setPassword`. We also call `parseInt` to cast our numeric string `input` to a number.
+Inside this callback, we call the `generate` function from our wasm module which in turn updates the password state via `setPassword`. We also call `parseInt` to cast our numeric string `input` to a number.
 
 Finally, we call the `useEffect` hook and subscribe to any changes to our input state, where we call our  `generatePassword` function as a side effect.
 
