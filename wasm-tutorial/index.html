@@ -550,9 +550,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 <h2 id="prerequisites">Prerequisites</h2>
 
 <ul>
-  <li>
-    <p>Rust and Cargo: Cargo is Rust’s package manager and build tool, sort of what npm is to Node. You can install both by following this <a href="https://www.rust-lang.org/tools/install">link</a>.</p>
-  </li>
+  <li>Rust and Cargo: Cargo is Rust’s package manager and build tool, sort of what npm is to Node. You can install both by following this <a href="https://www.rust-lang.org/tools/install">link</a>.</li>
   <li>wasm-pack: This is the one-stop shop tool for building and working with rust-generated Web Assembly, will definitely save us from writing a lot of boiler-plate code and potentially running into bugs. You can install by following this <a href="https://rustwasm.github.io/wasm-pack/installer/">link</a>.</li>
   <li>A <a href="https://nodejs.org/en/">node.js</a>) installation and a <a href="https://www.npmjs.com">npm</a> account,</li>
   <li>Some Rust and JavaScript/ React.js knowledge will be a plus</li>
@@ -947,7 +945,7 @@ npm <span class="nb">install</span> <span class="nt">--save-dev</span> @babel/co
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">//...</span><span class="w">
  </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="err">//</span><span class="w"> </span><span class="err">...</span><span class="w">
-    </span><span class="nl">"wasm-pass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"file:../pkg"</span><span class="w">
+    </span><span class="nl">"wasm-pass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"file:../pkg/wasm_pass"</span><span class="w">
   </span><span class="p">}</span><span class="err">,</span><span class="w">
 </span><span class="err">//...</span><span class="w">
 </span></code></pre></div></div>
@@ -1003,7 +1001,7 @@ npm <span class="nb">install</span> <span class="nt">--save-dev</span> @babel/co
 
 <p>This component also contains an input field for entering the desired length of the password and a button whose click event is handled by our <code class="language-plaintext highlighter-rouge">generatePassword</code> callback.</p>
 
-<p>We create our <code class="language-plaintext highlighter-rouge">generatePassword</code> callback using React’s <code class="language-plaintext highlighter-rouge">useCallback</code> hook to memoize the password generation logic from web assembly. We also import our <code class="language-plaintext highlighter-rouge">wasm-pass</code> package here. Notice how we use the <code class="language-plaintext highlighter-rouge">import</code> function rather than the regular ES6 <code class="language-plaintext highlighter-rouge">import</code> syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a <code class="language-plaintext highlighter-rouge">Promise</code>, therefore to gain access to our <code class="language-plaintext highlighter-rouge">wasm-pass</code> module, we use the <code class="language-plaintext highlighter-rouge">Promise.then</code> syntax.</p>
+<p>We create our <code class="language-plaintext highlighter-rouge">generatePassword</code> callback using React’s <code class="language-plaintext highlighter-rouge">useCallback</code> hook to memoize the password generation logic from web assembly with the <code class="language-plaintext highlighter-rouge">input</code> state value as our dependency. We also import our <code class="language-plaintext highlighter-rouge">wasm-pass</code> package here. Notice how we use the <code class="language-plaintext highlighter-rouge">import</code> function rather than the regular ES6 <code class="language-plaintext highlighter-rouge">import</code> syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a <code class="language-plaintext highlighter-rouge">Promise</code>, therefore to gain access to our <code class="language-plaintext highlighter-rouge">wasm-pass</code> module, we use the <code class="language-plaintext highlighter-rouge">Promise.then</code> syntax. We <code class="language-plaintext highlighter-rouge">alert</code> any error we catch.</p>
 
 <p>Inside this callback, we call the <code class="language-plaintext highlighter-rouge">generate</code> function from our wasm module which in turn updates the password state via <code class="language-plaintext highlighter-rouge">setPassword</code>. We also call <code class="language-plaintext highlighter-rouge">parseInt</code> to cast our numeric string <code class="language-plaintext highlighter-rouge">input</code> to a number.</p>
 
