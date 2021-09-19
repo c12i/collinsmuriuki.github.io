@@ -965,8 +965,6 @@ npm <span class="nb">install</span> <span class="nt">--save-dev</span> @babel/co
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useCallback</span><span class="p">,</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 
-<span class="kd">const</span> <span class="nx">wasm</span> <span class="o">=</span> <span class="k">import</span><span class="p">(</span><span class="dl">"</span><span class="s2">wasm-pass</span><span class="dl">"</span><span class="p">);</span>
-
 <span class="kd">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="kd">const</span> <span class="p">[</span><span class="nx">password</span><span class="p">,</span> <span class="nx">setPassword</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
     <span class="kd">const</span> <span class="p">[</span><span class="nx">input</span><span class="p">,</span> <span class="nx">setInput</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
