@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://collinsmuriuki.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://collinsmuriuki.xyz/" rel="alternate" type="text/html" /><updated>2021-08-04T23:39:05+03:00</updated><id>https://collinsmuriuki.xyz/feed.xml</id><title type="html">Collins Muriuki</title><subtitle>Understanding the universe and explaining it to a three year old.</subtitle><entry><title type="html">Building a Web Assembly powered password generator</title><link href="https://collinsmuriuki.xyz/wasm-tutorial/" rel="alternate" type="text/html" title="Building a Web Assembly powered password generator" /><published>2020-10-24T22:44:00+03:00</published><updated>2020-10-24T22:44:00+03:00</updated><id>https://collinsmuriuki.xyz/wasm-tutorial</id><content type="html" xml:base="https://collinsmuriuki.xyz/wasm-tutorial/">&lt;p&gt;In this tutorial, we will be building a simple npm package with Rust and Web Assembly and testing it out on a React application.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://collinsmuriuki.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://collinsmuriuki.xyz/" rel="alternate" type="text/html" /><updated>2021-09-19T13:22:32+03:00</updated><id>https://collinsmuriuki.xyz/feed.xml</id><title type="html">Collins Muriuki</title><subtitle>Understanding the universe and explaining it to a three year old.</subtitle><entry><title type="html">Building a Web Assembly powered password generator</title><link href="https://collinsmuriuki.xyz/wasm-tutorial/" rel="alternate" type="text/html" title="Building a Web Assembly powered password generator" /><published>2020-10-24T22:44:00+03:00</published><updated>2020-10-24T22:44:00+03:00</updated><id>https://collinsmuriuki.xyz/wasm-tutorial</id><content type="html" xml:base="https://collinsmuriuki.xyz/wasm-tutorial/">&lt;p&gt;In this tutorial, we will be building a simple npm package with Rust and Web Assembly and testing it out on a React application.&lt;/p&gt;
 
-&lt;h2 id=&quot;a-little-context-before-we-start&quot;&gt;A little context before we start&lt;/h2&gt;
+&lt;h2 id=&quot;some-context&quot;&gt;Some context&lt;/h2&gt;
 
 &lt;p&gt;Over the past few years, a popular trend in web development is emerging where developers write code in low level languages and compile it to a format that can be executed on the browser alongside JavaScript. That’s the high-level concept behind Web Assembly.&lt;/p&gt;
 
@@ -36,7 +36,7 @@
 
 &lt;p&gt;The outcome of running this is basically a Cargo generated Rust library crate with web-assembly batteries included. This means we are still able to add external crates/ libraries into the generated project, something we will get to later on.&lt;/p&gt;
 
-&lt;h2 id=&quot;breaking-down-the-boilerplate&quot;&gt;Breaking down the boilerplate&lt;/h2&gt;
+&lt;h2 id=&quot;dissecting-the-boilerplate&quot;&gt;Dissecting the boilerplate&lt;/h2&gt;
 
 &lt;p&gt;Let’s enter into our project and see what we have:&lt;/p&gt;
 
@@ -121,7 +121,7 @@ export function greet() {
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h1 id=&quot;now-to-the-fun-stuff&quot;&gt;Now to the fun stuff&lt;/h1&gt;
+&lt;h1 id=&quot;writing-some-rust&quot;&gt;Writing some Rust&lt;/h1&gt;
 
 &lt;h2 id=&quot;adding-an-external-crate&quot;&gt;Adding an external crate&lt;/h2&gt;
 
@@ -245,7 +245,7 @@ tests::test_generate
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wasm-pack build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;note-&quot;&gt;NOTE 🚨&lt;/h2&gt;
+&lt;h2 id=&quot;note&quot;&gt;Note!&lt;/h2&gt;
 
 &lt;p&gt;Incase you run into a very long error message reminding you to disable wasm-opt while attempting to compile your code, you can fix it by updating your Cargo.toml with the following:&lt;/p&gt;
 
@@ -259,7 +259,7 @@ tests::test_generate
 
 &lt;p&gt;You can then proceed to build your package again.&lt;/p&gt;
 
-&lt;h2 id=&quot;implementing-web-assembly-on-a-react-app&quot;&gt;Implementing Web Assembly on a React app&lt;/h2&gt;
+&lt;h2 id=&quot;implementing-web-assembly-on-a-react-application&quot;&gt;Implementing Web Assembly on a React application&lt;/h2&gt;
 
 &lt;p&gt;We are now going to try out our new package on a bare-bones React application to see the integration of Web Assembly and modern front-end technologies at play.&lt;/p&gt;
 
@@ -299,7 +299,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1.0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ie=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Document&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;wasm-pass&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'root'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -432,7 +432,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
 
 &lt;p&gt;&lt;em&gt;app/src/App.js&lt;/em&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useCallback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useEffect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;wasm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;wasm-pass&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
@@ -444,19 +444,19 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
         &lt;span class=&quot;nx&quot;&gt;setInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 
-    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;wasm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;wp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;setPassword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;wp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;generatePassword&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useCallback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;generate&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;wasm-pass&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;setPassword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
 
+    &lt;span class=&quot;nx&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;generatePassword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
             &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Enter&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onChange&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleChange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
-&lt;/span&gt;            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;handleClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Generate&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;generatePassword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Generate&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Password&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Your&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/strong&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
 &lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
@@ -466,11 +466,19 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;There are a couple of important changes in this file. First, we import the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useState&lt;/code&gt; hook from react for simple state management. We also import our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wasm-pass&lt;/code&gt; package. Notice how we use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import&lt;/code&gt; function rather than the regular ES6 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import&lt;/code&gt; syntax. This is because currently, we cannot load Web Assembly asynchronously. This import function will return a promise, therefore to gain access to our wasm-pass module, we will need to call wasm.then.&lt;/p&gt;
+&lt;p&gt;There are a couple of important changes in this file. First, we import the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useState&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useCallback&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; hooks from react for simple state management, memoization and performing of side effects.&lt;/p&gt;
 
-&lt;p&gt;This component also contains an input field for entering the desired length of the password and a button whose click event is handled by our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;handleClick&lt;/code&gt; callback. Inside this callback, we make a call to our generate function which in turn updates the password state. Any errors caught during this process will be sent out as an alert. The final password is displayed in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;strong&lt;/code&gt; tag.&lt;/p&gt;
+&lt;p&gt;This component also contains an input field for entering the desired length of the password and a button whose click event is handled by our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generatePassword&lt;/code&gt; callback.&lt;/p&gt;
 
-&lt;p&gt;Let’s run our dev server once again and see if everything works:&lt;/p&gt;
+&lt;p&gt;We create our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generatePassword&lt;/code&gt; callback using React’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useCallback&lt;/code&gt; hook to memoize the password generation logic from web assembly. We also import our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wasm-pass&lt;/code&gt; package here. Notice how we use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import&lt;/code&gt; function rather than the regular ES6 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import&lt;/code&gt; syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Promise&lt;/code&gt;, therefore to gain access to our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wasm-pass&lt;/code&gt; module, we will need to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;await&lt;/code&gt; the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Promise&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Inside this callback, we make a call to our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generate&lt;/code&gt; function from our wasm module which in turn updates the password state via the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setPassword&lt;/code&gt; function call. We also call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parseInt&lt;/code&gt; to cast our numeric string &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt; to a number.&lt;/p&gt;
+
+&lt;p&gt;We also call the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; hook and subscribe to any changes to our input state, where we call our  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generatePassword&lt;/code&gt; function as a side effect.&lt;/p&gt;
+
+&lt;p&gt;The final password is displayed in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;strong&lt;/code&gt; tag.&lt;/p&gt;
+
+&lt;p&gt;Let’s run our dev server once again and see what we get:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm start
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -483,7 +491,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
 
 &lt;p&gt;There’s so much more we can do with Rust and Web Assembly, we have barely scratched the surface! This tutorial hopefully shows how we transition from Rust to JavaScript through Web Assembly, and how we can implement a Web Assembly generated npm package on a React application.&lt;/p&gt;
 
-&lt;p&gt;A full working implementation of this project can be found &lt;a href=&quot;https://wasm-pass.gq&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A full working implementation of this project can be found &lt;a href=&quot;https://wasm-pass.collinsmuriuki.xyz&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here are some good resources if you wish to learn more about Rust and Web Assembly:&lt;/p&gt;
 
