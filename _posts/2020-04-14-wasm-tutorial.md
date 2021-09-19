@@ -34,7 +34,6 @@ To demonstrate this, we will be building a simple password generator program in 
 ## Prerequisites
 
 -   Rust and Cargo: Cargo is Rust’s package manager and build tool, sort of what npm is to Node. You can install both by following this [link](https://www.rust-lang.org/tools/install).
-
 -   wasm-pack: This is the one-stop shop tool for building and working with rust-generated Web Assembly, will definitely save us from writing a lot of boiler-plate code and potentially running into bugs. You can install by following this [link](https://rustwasm.github.io/wasm-pack/installer/).
 -   A [node.js](https://nodejs.org/en/)) installation and a [npm](https://www.npmjs.com) account,
 -   Some Rust and JavaScript/ React.js knowledge will be a plus
@@ -454,7 +453,7 @@ _app/package.json_
 //...
  "dependencies": {
     // ...
-    "wasm-pass": "file:../pkg"
+    "wasm-pass": "file:../pkg/wasm_pass"
   },
 //...
 ```
@@ -512,7 +511,7 @@ There are a couple of important changes in this file. First, we import the `useS
 
 This component also contains an input field for entering the desired length of the password and a button whose click event is handled by our `generatePassword` callback.
 
-We create our `generatePassword` callback using React's `useCallback` hook to memoize the password generation logic from web assembly. We also import our `wasm-pass` package here. Notice how we use the `import` function rather than the regular ES6 `import` syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a `Promise`, therefore to gain access to our `wasm-pass` module, we use the `Promise.then` syntax.
+We create our `generatePassword` callback using React's `useCallback` hook to memoize the password generation logic from web assembly with the `input` state value as our dependency. We also import our `wasm-pass` package here. Notice how we use the `import` function rather than the regular ES6 `import` syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a `Promise`, therefore to gain access to our `wasm-pass` module, we use the `Promise.then` syntax. We `alert` any error we catch.
 
 Inside this callback, we call the `generate` function from our wasm module which in turn updates the password state via `setPassword`. We also call `parseInt` to cast our numeric string `input` to a number.
 
