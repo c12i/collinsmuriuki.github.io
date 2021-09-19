@@ -474,8 +474,6 @@ _app/src/App.js_
 ```javascript
 import React, { useState, useCallback, useEffect } from "react";
 
-const wasm = import("wasm-pass");
-
 const App = () => {
     const [password, setPassword] = useState("");
     const [input, setInput] = useState("");
