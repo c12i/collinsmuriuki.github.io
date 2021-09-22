@@ -18,7 +18,7 @@ This is expected if your server is performing memory intensive tasks such as tra
 
 ## The V8 engine
 
-We all know that Node.js is built upon Google's V8 engine.
+Node.js is a JavaScript runtime built on top of Google's V8 engine.
 
 > V8 is Google’s open source high-performance JavaScript and WebAssembly engine, written in C++. It is used in Chrome and in Node.js, among others. It implements ECMAScript and WebAssembly, and runs on Windows 7 or later, macOS 10.12+, and Linux systems that use x64, IA-32, ARM, or MIPS processors. V8 can run standalone, or can be embedded into any C++ application.
 

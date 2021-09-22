@@ -489,7 +489,7 @@ const App = () => {
     }, [input]);
 
     useEffect(() => {
-        generatePassword(input)
+        generatePassword()
     }, [input]);
     return (
         <div>
