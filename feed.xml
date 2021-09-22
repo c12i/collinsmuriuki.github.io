@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://collinsmuriuki.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://collinsmuriuki.xyz/" rel="alternate" type="text/html" /><updated>2021-09-19T13:56:53+03:00</updated><id>https://collinsmuriuki.xyz/feed.xml</id><title type="html">Collins Muriuki</title><subtitle>Understanding the universe and explaining it to a three year old.</subtitle><entry><title type="html">Building a Web Assembly powered password generator</title><link href="https://collinsmuriuki.xyz/wasm-tutorial/" rel="alternate" type="text/html" title="Building a Web Assembly powered password generator" /><published>2020-10-24T22:44:00+03:00</published><updated>2020-10-24T22:44:00+03:00</updated><id>https://collinsmuriuki.xyz/wasm-tutorial</id><content type="html" xml:base="https://collinsmuriuki.xyz/wasm-tutorial/">&lt;p&gt;In this tutorial, we will be building a simple npm package with Rust and Web Assembly and testing it out on a React application.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://collinsmuriuki.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://collinsmuriuki.xyz/" rel="alternate" type="text/html" /><updated>2021-09-22T11:40:21+03:00</updated><id>https://collinsmuriuki.xyz/feed.xml</id><title type="html">Collins Muriuki</title><subtitle>Understanding the universe and explaining it to a three year old.</subtitle><entry><title type="html">Building a Web Assembly powered password generator</title><link href="https://collinsmuriuki.xyz/wasm-tutorial/" rel="alternate" type="text/html" title="Building a Web Assembly powered password generator" /><published>2020-10-24T22:44:00+03:00</published><updated>2020-10-24T22:44:00+03:00</updated><id>https://collinsmuriuki.xyz/wasm-tutorial</id><content type="html" xml:base="https://collinsmuriuki.xyz/wasm-tutorial/">&lt;p&gt;In this tutorial, we will be building a simple npm package with Rust and Web Assembly and testing it out on a React application.&lt;/p&gt;
 
 &lt;h2 id=&quot;some-context&quot;&gt;Some context&lt;/h2&gt;
 
@@ -12,7 +12,7 @@
 
 &lt;p&gt;Rust, on the other hand, is a blazingly fast systems language which gives developers low-level control and reliable performance. It lacks a garbage collector which slows down high-level languages like JavaScript.&lt;/p&gt;
 
-&lt;p&gt;The benefit of using Rust with Web Assembly is just how simple the developer experience is! Integration with and support for popular tools in the JavaScript ecosystem such as npm and web-pack make it a breeze to work with.&lt;/p&gt;
+&lt;p&gt;The benefit of using Rust with Web Assembly is just how simple the developer experience is! Integration with and support for popular tools in the JavaScript ecosystem such as npm and web-pack make it very developer friendly.&lt;/p&gt;
 
 &lt;p&gt;To demonstrate this, we will be building a simple password generator program in Rust, compiling that code into Web Assembly and publishing the resulting package to npm to be used by other developers. As a bonus, we will also be creating a bear-bones React application which will make use of our package. By the end of this project, the interplay between these technologies will be vivid.&lt;/p&gt;
 
@@ -21,7 +21,7 @@
 &lt;ul&gt;
   &lt;li&gt;Rust and Cargo: Cargo is Rust’s package manager and build tool, sort of what npm is to Node. You can install both by following this &lt;a href=&quot;https://www.rust-lang.org/tools/install&quot;&gt;link&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;wasm-pack: This is the one-stop shop tool for building and working with rust-generated Web Assembly, will definitely save us from writing a lot of boiler-plate code and potentially running into bugs. You can install by following this &lt;a href=&quot;https://rustwasm.github.io/wasm-pack/installer/&quot;&gt;link&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;A &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;node.js&lt;/a&gt;) installation and a &lt;a href=&quot;https://www.npmjs.com&quot;&gt;npm&lt;/a&gt; account,&lt;/li&gt;
+  &lt;li&gt;A &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;node.js&lt;/a&gt;) installation&lt;/li&gt;
   &lt;li&gt;Some Rust and JavaScript/ React.js knowledge will be a plus&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -134,9 +134,9 @@ export function greet() {
 &lt;span class=&quot;nn&quot;&gt;rand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;0.7.3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;features&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;[&quot;wasm-bindgen&quot;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Here we add the rand crate version = “0.7.3” to our dependencies.&lt;/p&gt;
+&lt;p&gt;Here we add the rand crate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;version = &quot;0.7.3&quot;&lt;/code&gt; to our dependencies.&lt;/p&gt;
 
-&lt;p&gt;We also include a feature flag; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;features=[&quot;wasm-bindgen&quot;]&lt;/code&gt; in order to get a version of the rand crate which is capable of getting compiled into Web Assembly.&lt;/p&gt;
+&lt;p&gt;We also include a feature flag; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;features=[&quot;wasm-bindgen&quot;]&lt;/code&gt; in order to get a version of the rand crate which is can be compiled into Web Assembly.&lt;/p&gt;
 
 &lt;p&gt;The rand crate provides utilities to generate random numbers and convert them to useful types, we will be making use of this in our password generator program.&lt;/p&gt;
 
@@ -147,7 +147,7 @@ export function greet() {
 
 &lt;h2 id=&quot;implementing-our-password-generator-logic&quot;&gt;Implementing our password generator logic&lt;/h2&gt;
 
-&lt;p&gt;Now that we have the rand crate installed, we can bring it into the scope of our code in src/lib.rs. All functionality provided by the crate will be accessible through the crate’s name, in this case rand. We are particularly interested in the Rng trait provided by the crate, we can access it by bringing it into scope using the use keyword:&lt;/p&gt;
+&lt;p&gt;Now that we have the rand crate installed, we can bring it into the scope of our code in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/lib.rs&lt;/code&gt;. All functionality provided by the crate will be accessible through the crate’s name, in this case rand. We are particularly interested in the Rng trait provided by the crate, we can access it by bringing it into scope using the use keyword:&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;src/lib.rs&lt;/em&gt;&lt;/p&gt;
 
@@ -172,15 +172,15 @@ export function greet() {
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;To make things less cluttered, I have deleted a lot of the default code generated by wasm-pack since we won’t be needing it any more. I also added a public generate function which takes a single argument &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;len&lt;/code&gt; of type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;usize&lt;/code&gt; and returns a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To make keep things clean, I have deleted a lot of the default code generated by wasm-pack since we won’t be needing it any more. I also added a public generate function which takes a single argument &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;len&lt;/code&gt; of type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;usize&lt;/code&gt; and returns a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;If you are unfamiliar with the Rust syntax, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;usize&lt;/code&gt; is an unsigned integer type which counts how many bytes it takes to reference a location in memory.&lt;/p&gt;
 
-&lt;p&gt;Inside our function we create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHARSET&lt;/code&gt; constant of type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;[u8]&lt;/code&gt;, simply a reference to an array of unsigned 8bit integers. In Rust, u8 integers can store numbers from 0 to 2^8 - 1, which is bascally numbers from 0 to 255. We set the value of this constant as a string slice of letters and symbols converted to a byte array through calling the method .as_bytes().&lt;/p&gt;
+&lt;p&gt;Inside our function we create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHARSET&lt;/code&gt; constant of type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;[u8]&lt;/code&gt;, simply a reference to an array of unsigned 8bit integers. In Rust, u8 integers can store numbers from 0 to 2^8 - 1, which is bascally numbers from 0 to 255. We set the value of this constant as a string slice of letters and symbols converted to a byte array through calling the method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;as_bytes&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;We create a mutable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rng&lt;/code&gt; variable where we make use of the rand crate’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;thread_rng()&lt;/code&gt; function to create our random number generator, an instance of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ThreadRng&lt;/code&gt; struct, which contains useful methods that generate random numbers for us. We then create a password variable and annotate it’s type as a String, what we expect as the final outcome of this operation.&lt;/p&gt;
+&lt;p&gt;We create a mutable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rng&lt;/code&gt; variable where we make use of the rand crate’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;thread_rng&lt;/code&gt; function to create our random number generator, an instance of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ThreadRng&lt;/code&gt; struct, which contains useful methods that generate random numbers for us. We then create a password variable and annotate it’s type as a String, what we expect as the final outcome of this operation.&lt;/p&gt;
 
-&lt;p&gt;We then make use of Rust’s functional programming features by calling the .map() method on a range of numbers between 0 and the user provided len value. For each number within this range, we call a closure where we declare a variable idx which contains a random generated number between 0 and the length of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHARSET&lt;/code&gt; byte array, through calling the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gen_range&lt;/code&gt; method. The closure returns the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;u8&lt;/code&gt; integer at the idx index of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHARSET&lt;/code&gt; byte array type casted to a char type.&lt;/p&gt;
+&lt;p&gt;We then make use of Rust’s functional programming features by calling the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;map&lt;/code&gt; method on a range of numbers between 0 and the user provided len value. For each number within this range, we call a closure where we declare a variable idx which contains a random generated number between 0 and the length of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHARSET&lt;/code&gt; byte array, through calling the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gen_range&lt;/code&gt; method. The closure returns the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;u8&lt;/code&gt; integer at the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;idx&lt;/code&gt; index of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHARSET&lt;/code&gt; byte array type casted to a char type.&lt;/p&gt;
 
 &lt;p&gt;We finally call the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;collect&lt;/code&gt; method to transform the output from the iterator into a collection, which is a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt; in this case. This is what we eventually return from our function.&lt;/p&gt;
 
@@ -238,14 +238,14 @@ tests::test_generate
 &lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;result: ok. 1 passed&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 0 failed&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 0 ignored&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 0 measured&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 0 filtered out
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Our tests are successful! We are also able to see our random password printed out on the standart output! Now we can compile our Rust code into Web Assembly by running our trusty build command yet again:&lt;/p&gt;
+&lt;p&gt;Our tests are successful! We are also able to see our random password printed out on the standard output! Now we can compile our Rust code into Web Assembly by running our trusty build command yet again:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wasm-pack build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;note&quot;&gt;Note!&lt;/h2&gt;
 
-&lt;p&gt;Incase you run into a very long error message reminding you to disable wasm-opt while attempting to compile your code, you can fix it by updating your Cargo.toml with the following:&lt;/p&gt;
+&lt;p&gt;Incase you run into an error message reminding you to disable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wasm-opt&lt;/code&gt; while attempting to compile your code, you can fix it by updating your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cargo.toml&lt;/code&gt; with the following:&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Cargo.toml&lt;/em&gt;&lt;/p&gt;
 
@@ -253,7 +253,7 @@ tests::test_generate
 &lt;span class=&quot;py&quot;&gt;wasm-opt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This will disable wasm-pack Web Assembly optimization for the release profile, which is tolerable for our simple project&lt;/p&gt;
+&lt;p&gt;This will disable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wasm-pack&lt;/code&gt; Web Assembly optimization for the release profile, which is tolerable for our simple project.&lt;/p&gt;
 
 &lt;p&gt;You can then proceed to build your package again.&lt;/p&gt;
 
@@ -261,15 +261,13 @@ tests::test_generate
 
 &lt;p&gt;We are now going to try out our new package on a bare-bones React application to see the integration of Web Assembly and modern front-end technologies at play.&lt;/p&gt;
 
-&lt;p&gt;You may ask why we are not using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;create-react-app&lt;/code&gt; to quickly spin up a React project. The reason is because the default application generated by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;create-react-app&lt;/code&gt; lacks the ability to load web assembly out of the box. We could of-course run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm run eject&lt;/code&gt; to customize the webpack configurations of a create-react-app project but that would be too overkill for our simple project. Besides, building a bear-bones React app is not as complicated as it seems, you will see that shortly.&lt;/p&gt;
-
-&lt;p&gt;On the root of our main project, we will first create a app directory, which will contain our React application, and cd into it.&lt;/p&gt;
+&lt;p&gt;In the root of our main project, we will first create a app directory, which will contain our React application, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; into it.&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;app
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;app
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Inside, we will create a src directory and we also create a .gitignore file with node_modules inside:&lt;/p&gt;
+&lt;p&gt;Inside, we will create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src&lt;/code&gt; directory and we also create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; file with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; inside:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;src
 &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/node_modules&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; .gitignore
@@ -287,7 +285,7 @@ tests::test_generate
 npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--save-dev&lt;/span&gt; @babel/core @babel/preset-env @babel/preset-react babel-loader webpack webpack-cli webpack-dev-server html-webpack-plugin style-loader css-loader html-loader
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We then create a index.html file at the root of our app directory and add the following:&lt;/p&gt;
+&lt;p&gt;We then create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file at the root of our app directory and add the following:&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;app/index.html&lt;/em&gt;&lt;/p&gt;
 
@@ -305,7 +303,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;In the src directory, we add an index.js, which will serve as the entry point to our React application:&lt;/p&gt;
+&lt;p&gt;In the src directory, we add an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt;, which will serve as the entry point to our React application:&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;app/src/index.js&lt;/em&gt;&lt;/p&gt;
 
@@ -316,7 +314,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
 &lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We will also need to create a App.js file in the src directory which will contain our App component:&lt;/p&gt;
+&lt;p&gt;We will also need to create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App.js&lt;/code&gt; file in the src directory which will contain our App component:&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;app/src/App.js&lt;/em&gt;&lt;/p&gt;
 
@@ -403,11 +401,11 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm start
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Our React app is now running on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost:8080&lt;/code&gt;!&lt;/p&gt;
+&lt;p&gt;Our React app is now running on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080&lt;/code&gt;!&lt;/p&gt;
 
 &lt;h2 id=&quot;using-our-package&quot;&gt;Using our package&lt;/h2&gt;
 
-&lt;p&gt;Now that we have our React app working, we can test our wasm-pass package inside it. To avoid any conflicts in the name you chose for your npm package, we will use the local package in the pkg directory instead. We add it as a dependency in our package.json like so:&lt;/p&gt;
+&lt;p&gt;Now that we have our React app working, we can test our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wasm-pass&lt;/code&gt; package inside it. To avoid any conflicts in the name you chose for your npm package, we will use the local package in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pkg&lt;/code&gt; directory instead. We add it as a dependency in our package.json like so:&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;app/package.json&lt;/em&gt;&lt;/p&gt;
 
@@ -419,7 +417,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
 &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Since we are importing our package locally, we set the version as a file referencing the location of our wasm-pack generated pkg directory.&lt;/p&gt;
+&lt;p&gt;Since we are importing our package locally, we set the version as a file referencing the location of our wasm-pack generated &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pkg&lt;/code&gt; directory content.&lt;/p&gt;
 
 &lt;p&gt;Finally, run npm install to have it saved in our node_modules:&lt;/p&gt;
 
