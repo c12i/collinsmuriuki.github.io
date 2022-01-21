@@ -6,7 +6,7 @@ layout: page
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
 <p>
- I am a software developer from Nairobi, Kenya who enjoys writing programs and solving problems in the cleanest, most declarative and most testable way possible. Curiosity and the urge to understand the inner workings of any software I interact with are my main driving forces, therefore I am always in a perpetual loop of learning and trying out something new every day. I generally love tech, but at the moment, my primary interests lie in web technologies, distributed systems and cryptocurrencies.
+ I am a programmer from Nairobi, Kenya who enjoys writing code and solving complex problems. Curiosity and the urge to understand the inner workings of any software I interact with are my main driving forces, therefore I am a perpetual learner. My primary interests lie in programming languages,web technologies, distributed systems and cryptocurrencies.
 </p>
 
 <p>
@@ -27,7 +27,7 @@ On the side, I am an avid gamer with PC being my platform of choice, first perso
 	<li>Python</li>
 	<li>Docker / Swarm / K8s</li>
 	<li>REST / GraphQL / gRPC</li>
-	<!-- <li>PostgreSQL / MySQL / Redis</li> -->
+	<li>PostgreSQL / MySQL / Redis</li>
 </ul>
 
 <!-- <h2>Projects</h2>
