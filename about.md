@@ -6,7 +6,7 @@ layout: page
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
 <p>
- I am a programmer from Nairobi, Kenya who enjoys writing code and solving complex problems. Curiosity and the urge to understand the inner workings of any software I interact with are my main driving forces, therefore I am a perpetual learner. My primary interests lie in programming languages,web technologies, distributed systems and cryptocurrencies.
+ I am a programmer from Nairobi, Kenya who enjoys writing code and solving complex problems. Curiosity and the urge to understand the inner workings of any software I interact with are my main driving forces, therefore I am a perpetual learner. My primary interests lie in programming languages, web technologies, distributed systems and cryptocurrencies.
 </p>
 
 <p>
