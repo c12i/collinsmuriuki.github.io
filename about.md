@@ -6,12 +6,8 @@ layout: page
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
 <p>
-Collins is a Nairobi-based programmer passionate about writing efficient code and solving complex problems. Specializing in programming languages, web technologies, distributed systems, and cryptocurrencies.
+Collins is a Nairobi-based programmer passionate about writing efficient code and solving complex problems. Specializing in programming languages, web technologies and distributed systems.
 </p>
-
-<p>
-	You can reach me via email at <a href="mailto:hello@collinsmuriuki.xyz">hello@collinsmuriuki.xyz</a>.
-<p/>
 
 <h2>My specialties</h2>
 
@@ -26,10 +22,3 @@ Collins is a Nairobi-based programmer passionate about writing efficient code an
 	<li>PostgreSQL / MySQL / Redis</li>
 </ul>
 
-<!-- <h2>Projects</h2>
-
-<ul>
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
-</ul> -->
