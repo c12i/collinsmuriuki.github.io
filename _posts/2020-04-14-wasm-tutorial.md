@@ -9,54 +9,44 @@ tag:
     - wasm
     - react.js
     - javascript
-star: true
+star: false
 category: blog
 author: collinsmuriuki
 description: Building a Web Assembly powered password generator with rust-wasm and React.js.
 ---
 
-In this tutorial, we will be building a simple npm package with Rust and Web Assembly and testing it out on a React application.
+# Building a Web Assembly-powered Password Generator with Rust and React
 
-## Some context
+## Introduction
 
-Over the past few years, a popular trend in web development is emerging where developers write code in low level languages and compile it to a format that can be executed on the browser alongside JavaScript. That’s the high-level concept behind Web Assembly.
+In this tutorial, we will explore the fascinating intersection of Rust, Web Assembly (Wasm), and React by building a simple password generator. We'll leverage the speed and performance benefits of Rust, compile it into Wasm, and seamlessly integrate it into a React application. By the end of this project, you'll have a clear understanding of how these technologies work together.
 
-> _But What exactly is it and why use the Rust programming language?_
+## Why Rust and Web Assembly?
 
-Web Assembly (wasm) is a simple machine model and executable format with an extensive specification. It is designed to be portable, compact and execute at or near native speeds and is a compilation target for languages such as Rust, C, C++ and more.
-
-Rust, on the other hand, is a blazingly fast systems language which gives developers low-level control and reliable performance. It lacks a garbage collector which slows down high-level languages like JavaScript.
-
-The benefit of using Rust with Web Assembly is just how simple the developer experience is! Integration with and support for popular tools in the JavaScript ecosystem such as npm and web-pack make it very developer friendly.
-
-To demonstrate this, we will be building a simple password generator program in Rust, compiling that code into Web Assembly and publishing the resulting package to npm to be used by other developers. As a bonus, we will also be creating a bear-bones React application which will make use of our package. By the end of this project, the interplay between these technologies will be vivid.
+Web Assembly is a low-level virtual machine that allows executing code at near-native speeds within web browsers. Rust, known for its speed and memory safety, is an ideal language for Wasm. Unlike high-level languages like JavaScript, Rust provides developers with low-level control and reliable performance, making it an excellent choice for Wasm.
 
 ## Prerequisites
 
--   Rust and Cargo: Cargo is Rust’s package manager and build tool, sort of what npm is to Node. You can install both by following this [link](https://www.rust-lang.org/tools/install).
--   wasm-pack: This is the one-stop shop tool for building and working with rust-generated Web Assembly, will definitely save us from writing a lot of boiler-plate code and potentially running into bugs. You can install by following this [link](https://rustwasm.github.io/wasm-pack/installer/).
--   A [node.js](https://nodejs.org/en/)) installation
--   Some Rust and JavaScript/ React.js knowledge will be a plus
+Before we dive into the project, ensure you have the following tools and knowledge:
 
-## Initializing our Rust project with wasm-pack
+- Rust and Cargo: Install them using [this link](https://www.rust-lang.org/tools/install).
+- wasm-pack: A tool for building and working with Rust-generated Web Assembly. Install it [here](https://rustwasm.github.io/wasm-pack/installer/).
+- Node.js: Required for React development. Install it from [nodejs.org](https://nodejs.org/en/).
+- Basic knowledge of Rust and JavaScript/React.js.
 
-Starting a Rust Web Assembly project is as simple as running the following command in your terminal:
+## Initializing the Rust Project
+
+Let's start by creating a new Rust Web Assembly project using the following command:
 
 ```shell
 wasm-pack new wasm_pass
 ```
 
-The outcome of running this is basically a Cargo generated Rust library crate with web-assembly batteries included. This means we are still able to add external crates/ libraries into the generated project, something we will get to later on.
+This command generates a Rust library crate with Web Assembly support. The crucial files are `Cargo.toml`, `src/lib.rs`, and `src/utils.rs`.
 
-## Dissecting the boilerplate
+## Dissecting the Boilerplate
 
-Let’s enter into our project and see what we have:
-
-```shell
-cd wasm_pass
-```
-
-Below is the file tree of our generated project; the most important files we will focus on are the Cargo.toml and src/lib.rs:
+Explore the generated project structure:
 
 ```shell
 wasm_pass/
@@ -64,30 +54,24 @@ wasm_pass/
 ├── LICENSE_APACHE
 ├── LICENSE_MIT
 ├── README.md
-    └── src
-        ├── lib.rs
-        └── utils.rs
+└── src
+    ├── lib.rs
+    └── utils.rs
 ```
 
-_src/Cargo.toml_
+- **Cargo.toml**: Contains project dependencies and metadata.
+- **lib.rs**: The root of the crate, compiled into Web Assembly.
+- **utils.rs**: Includes debugging utilities (not used in this project).
 
-The Cargo.toml file contains the dependencies of our project as well as metadata for our crate. Since our crate was generated by wasm-pack, we get wasm-bindgen already preconfigured for us.
+## Initial Build
 
-_src/lib.rs_
+Build the project using:
 
-This is root of our crate which will be ultimately compiled to Web Assembly. The preconfigured wasm_bindgen crate allows us to interface our Rust code with JavaScript by simply adding the #[wasm_bindgen] attribute to any Rust code we would like to expose to JavaScript. The existing code imports the window.alert JavaScript function and exports a greet function.
+```shell
+wasm-pack build
+```
 
-_src/utils.rs_
-
-This module contains some useful debugging utilities for our compiled Web Assembly, we won’t be making use of this module during this project.
-
-## Initial build
-
-To get a better understanding of how we compile our Rust code to Web Assembly and have it exposed to JavScript, we will first build the example Rust code generated by wasm-pack and see what we get:
-
-_wasm-pack build_
-
-When this is complete, you you should expect a pkg directory to be generated at the root of our project with the following build artefacts inside:
+This creates a `pkg` directory with the following artifacts:
 
 ```shell
 pkg/
@@ -98,55 +82,11 @@ pkg/
 └── wasm_pass.js
 ```
 
-wasm-pack does a great job at bundling our resulting artefacts into a “npm publishable” state as you can see. The README.md is simply a copy of our main project’s README.md. Let’s break down the rest of the files in more detail.
+These files enable npm integration and contain the compiled Web Assembly code.
 
-_pkg/wasm_pass.wasm_
+## Writing Rust Code
 
-This is the Web Assembly binary generated by the Rust compiler from our code in src/lib.rs. It simply contains all our Rust functions we had wrapped with the #[wasm_bindgen] attribute compiled to wasm!
-
-_pkg/wasm_pass.js_
-
-This file is generated by wasm-bindgen and contains JavaScript code which acts as the intermediary between JavaScript and Rust by allowing importation of DOM and JavaScript functions into Rust and creating a JavaScript friendly API from our web assembly functions.
-
-```javascript
-import * as wasm from './wasm_pass_bg’;
-
-// …
-
-export function greet() {
-    return wasm.greet();
-}
-```
-
-_pkg/wasm_pass.d.ts_
-
-The .d.ts contains TypeScript type declarations for those who will be using TypeScript. Therefore, calls to our Web Assembly code will be type-checked and you will get nice features such as intellisense and auto-completion depending on the IDE you use.
-
-_pkg/package.json_
-
-The package.json file contains meta-data about the generated JavaScript and WebAssembly package. This helps integrate with JavaScript tooling and allow us to publish our package to npm.
-
-```json
-{
-    "name": "wasm-pass",
-    "collaborators": ["Your Name <your.email@example.com>"],
-    "version": "0.1.0",
-    "files": ["wasm_pass_bg.wasm", "wasm_pass.js", "wasm_pass.d.ts"],
-    "module": "wasm_pass.js",
-    "types": "wasm_pass.d.ts",
-    "sideEffects": false
-}
-```
-
-# Writing some Rust
-
-## Adding an external crate
-
-First thing we want to do first is add an external crate to our project.
-
-Installing external libraries or crates, as they are referred to in the Rust community, is as easy as specifying the name and version of the library we would like to use under the dependencies column of our Cargo.toml like so:
-
-_Cargo.toml_
+Update the `Cargo.toml` file to include the `rand` crate:
 
 ```toml
 [dependencies]
@@ -154,23 +94,9 @@ wasm-bindgen = "0.2.63"
 rand = { version = "0.7.3", features = ["wasm-bindgen"] }
 ```
 
-Here we add the rand crate `version = "0.7.3"` to our dependencies.
+This adds the random number generation utility to our project. Run `cargo build` to download the new dependency.
 
-We also include a feature flag; `features=["wasm-bindgen"]` in order to get a version of the rand crate which is can be compiled into Web Assembly.
-
-The rand crate provides utilities to generate random numbers and convert them to useful types, we will be making use of this in our password generator program.
-
-Lets build our project to download our newly added external crate.
-
-```shell
-cargo build
-```
-
-## Implementing our password generator logic
-
-Now that we have the rand crate installed, we can bring it into the scope of our code in `src/lib.rs`. All functionality provided by the crate will be accessible through the crate’s name, in this case rand. We are particularly interested in the Rng trait provided by the crate, we can access it by bringing it into scope using the use keyword:
-
-_src/lib.rs_
+Implement the password generator logic in `src/lib.rs`:
 
 ```rust
 use wasm_bindgen::prelude::*;
@@ -194,279 +120,63 @@ pub fn generate(len: usize) -> String {
 }
 ```
 
-To make keep things clean, I have deleted a lot of the default code generated by wasm-pack since we won’t be needing it any more. I also added a public generate function which takes a single argument `len` of type `usize` and returns a `String`.
+This function generates a random password of the specified length using the `rand` crate.
 
-If you are unfamiliar with the Rust syntax, `usize` is an unsigned integer type which counts how many bytes it takes to reference a location in memory.
+## Testing the Code
 
-Inside our function we create a `CHARSET` constant of type `&[u8]`, simply a reference to an array of unsigned 8bit integers. In Rust, u8 integers can store numbers from 0 to 2^8 - 1, which is bascally numbers from 0 to 255. We set the value of this constant as a string slice of letters and symbols converted to a byte array through calling the method `as_bytes`.
-
-We create a mutable `rng` variable where we make use of the rand crate's `thread_rng` function to create our random number generator, an instance of the `ThreadRng` struct, which contains useful methods that generate random numbers for us. We then create a password variable and annotate it’s type as a String, what we expect as the final outcome of this operation.
-
-We then make use of Rust’s functional programming features by calling the `map` method on a range of numbers between 0 and the user provided len value. For each number within this range, we call a closure where we declare a variable idx which contains a random generated number between 0 and the length of the `CHARSET` byte array, through calling the `gen_range` method. The closure returns the `&u8` integer at the `idx` index of the `CHARSET` byte array type casted to a char type.
-
-We finally call the `collect` method to transform the output from the iterator into a collection, which is a `String` in this case. This is what we eventually return from our function.
-
-## Testing our code
-
-It is always best practice to test code before we ship it, let’s go ahead and write a simple unit-test for our generate function. Feel free to delete the default tests/ directory generated by wasm-pack at this point since it is redundant to us now.
-
-We will write our tests in the same module where our generate function is declared, a popular convention in Rust:
-
-_src/lib.rs_
+Write a test for the `generate` function in `src/lib.rs`:
 
 ```rust
-//...our function
-
 #[cfg(test)]
 mod tests {
     use super::generate;
+
     #[test]
     fn test_generate() {
         let password = generate(20);
-        println!("{}", password);
         assert_eq!(password.len(), 20);
     }
 }
 ```
 
-We first create a tests module using the mod keyword and use the `#[cfg(test)]` attribute to basically to have this module only compiled when we run tests. Inside the module, we import our generate function from the outer scope.
-
-We write a test function test_generate, which we mark with the `#[test]` attribute to inform the test runner to treat this function as a test. Inside our function, we declare a password variable which we assign to the result of a call to our generate function, where we pass 20 as a parameter, since we want to generate a password with twenty characters.
-
-We then write a print statement with Rust's `println!` macro so we can see our generated password printed on the standard output. Finally, we use another Rust macro `assert_eq!` to assert that the length of the password which is generated by our function is equal to 20.
-
-## Now we can run our tests:
+Run the tests with:
 
 ```shell
 cargo test -- --show-output
 ```
 
-Note that we add the `--show-output flag`, in order to be able to see what is printed into the standard output as our tests run.
+Ensure the tests pass, confirming the functionality of the password generator.
 
-When we run the tests, we should see the following output:
+## Implementing Web Assembly in a React App
 
-```shell
-running 1 test
-
-test tests::test_generate ... ok
-
-successes:
-
----- tests::test_generate stdout ----
-
-ZCoNq~!WT7V#AmL9GvmP
-
-successes:
-
-tests::test_generate
-
-test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
-```
-
-Our tests are successful! We are also able to see our random password printed out on the standard output! Now we can compile our Rust code into Web Assembly by running our trusty build command yet again:
-
-```shell
-wasm-pack build
-```
-
-## Note!
-
-Incase you run into an error message reminding you to disable `wasm-opt` while attempting to compile your code, you can fix it by updating your `Cargo.toml` with the following:
-
-_Cargo.toml_
-
-```toml
-[package.metadata.wasm-pack.profile.release]
-wasm-opt = false
-```
-
-This will disable `wasm-pack` Web Assembly optimization for the release profile, which is tolerable for our simple project.
-
-You can then proceed to build your package again.
-
-## Implementing Web Assembly on a React application
-
-We are now going to try out our new package on a bare-bones React application to see the integration of Web Assembly and modern front-end technologies at play.
-
-In the root of our main project, we will first create a app directory, which will contain our React application, and `cd` into it.
+Create a React app in the `app` directory:
 
 ```shell
 mkdir app
 cd app
-```
-
-Inside, we will create a `src` directory and we also create a `.gitignore` file with `node_modules` inside:
-
-```shell
 mkdir src
 echo "/node_modules" > .gitignore
-```
-
-We then initialize an npm package with default options by running:
-
-```shell
 npm init -y
 ```
 
-Next, we install React, Babel, webpack and _a few_ other webpack plugins:
+Install necessary dependencies:
 
 ```shell
 npm install --save react react-dom
-
 npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader webpack webpack-cli webpack-dev-server html-webpack-plugin style-loader css-loader html-loader
 ```
 
-We then create a `index.html` file at the root of our app directory and add the following:
+Create the React app files: `index.html`, `index.js`, and `App.js`. Configure Babel with `.babelrc` and Webpack with `webpack.config.js`.
 
-_app/index.html_
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>wasm-pass</title>
-  </head>
-  <body>
-    <div id='root'>
-  </body>
-</html>
-```
-
-In the src directory, we add an `index.js`, which will serve as the entry point to our React application:
-
-_app/src/index.js_
-
-```javascript
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App.js";
-
-ReactDOM.render(<App />, document.getElementById("root"));
-```
-
-We will also need to create a `App.js` file in the src directory which will contain our App component:
-
-_app/src/App.js_
-
-```javascript
-import React from "react";
-
-const App = () => {
-    return <h1>Hello from React</h1>;
-};
-
-export default App;
-```
-
-Now we can create a `.babelrc` file at the root of our app directory:
-
-_app/.babelrc_
-
-```javascript
-{
-  "presets": ["@babel/preset-env", "@babel/preset-react"]
-}
-```
-
-We proceed to add a `webpack.config.js` file also at the root of our app directory (don't worry too much about it's content):
-
-_app/webpack.config.js_
-
-```javascript
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
-const path = require("path");
-
-module.exports = {
-    entry: "./src/index.js",
-    output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: "index.js",
-    },
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                },
-            },
-            {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"],
-            },
-            {
-                test: /\.s[ac]ss$/i,
-                use: ["style-loader", "css-loader"],
-            },
-            {
-                test: /\.html$/,
-                use: {
-                    loader: "html-loader",
-                },
-            },
-        ],
-    },
-    mode: "development",
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: "./index.html",
-        }),
-    ],
-};
-```
-
-Finally, we add a start and build script to our package.json
-
-_app/package.json_
-
-```json
-// ...
-"scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack --config webpack.config.js",
-},
-// ...
-```
-
-We can start our webpack server by running:
+Finally, run the development server:
 
 ```shell
 npm start
 ```
 
-Our React app is now running on `http://localhost:8080`!
+## Using the Package in React
 
-## Using our package
-
-Now that we have our React app working, we can test our `wasm-pass` package inside it. To avoid any conflicts in the name you chose for your npm package, we will use the local package in the `pkg` directory instead. We add it as a dependency in our package.json like so:
-
-_app/package.json_
-
-```json
-//...
- "dependencies": {
-    // ...
-    "wasm-pass": "file:../pkg/wasm_pass"
-  },
-//...
-```
-
-Since we are importing our package locally, we set the version as a file referencing the location of our wasm-pack generated `pkg` directory content.
-
-Finally, run npm install to have it saved in our node_modules:
-
-```shell
-npm install
-```
-
-Let's now update our App component:
-
-_app/src/App.js_
+Update the `App.js` file to use the Rust-generated Web Assembly package:
 
 ```javascript
 import React, { useState, useCallback, useEffect } from "react";
@@ -491,6 +201,7 @@ const App = () => {
     useEffect(() => {
         generatePassword()
     }, [input]);
+
     return (
         <div>
             <p>Enter password length:</p>
@@ -505,40 +216,16 @@ const App = () => {
 export default App;
 ```
 
-There are a couple of important changes in this file. First, we import the `useState`, `useCallback` and `useEffect` hooks from react for simple state management, memoization and performing of side effects.
-
-This component also contains an input field for entering the desired length of the password and a button whose click event is handled by our `generatePassword` callback.
-
-We create our `generatePassword` callback using React's `useCallback` hook to memoize the password generation logic from web assembly with the `input` state value as our dependency. We also import our `wasm-pass` package here. Notice how we use the `import` function rather than the regular ES6 `import` syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a `Promise`, therefore to gain access to our `wasm-pass` module, we use the `Promise.then` syntax. We `alert` any error we catch.
-
-Inside this callback, we call the `generate` function from our wasm module which in turn updates the password state via `setPassword`. We also call `parseInt` to cast our numeric string `input` to a number.
-
-Finally, we call the `useEffect` hook and subscribe to any changes to our input state, where we call our  `generatePassword` function as a side effect.
-
-The final password is displayed in a `strong` tag. 
-
-Let's run our dev server once again and see what we get:
-
-```shell
-npm start
-```
-
-![working.gif](https://res.cloudinary.com/collinsmuriuki/image/upload/v1607412908/working_5254a3d015.gif)
-
-Our simple password generator is working!
+This React component allows users to input a password length, click a button, and receive a randomly generated password from the Rust Web Assembly package.
 
 ## Conclusion
 
-There's so much more we can do with Rust and Web Assembly, we have barely scratched the surface! This tutorial hopefully shows how we transition from Rust to JavaScript through Web Assembly, and how we can implement a Web Assembly generated npm package on a React application.
+This tutorial showcases the integration of Rust and Web Assembly in a React application, providing a powerful blend of performance and modern front-end technologies. Explore further resources to deepen your understanding of Rust and Web Assembly:
 
-A full working implementation of this project can be found [here](https://wasm-pass.collinsmuriuki.xyz).
+- [The Rust Book](https://doc.rust-lang.org/book/)
+- [Rust and Web Assembly Book](https://rustwasm.github.io/docs/book/)
+- [wasm-bindgen Documentation](https://rustwasm.github.io/docs/wasm-bindgen/introduction.html)
+- [Wasm By Example](https://wasmbyexample.dev/home.en-us.html)
+- [WebAssembly.org](https://webassembly.org/)
 
-Here are some good resources if you wish to learn more about Rust and Web Assembly:
-
--   [The Rust Book](https://doc.rust-lang.org/book/) is the go to resource if you wish to familiarize yourself with the Rust programming language
-
--   For experienced Rust developers who would like to dip their toes into Web Assembly, consider checking out [the rustwasm book](https://rustwasm.github.io/docs/book/)
-
--   [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/introduction.html) is another awesome resource I recommend going through, the content is extensive with good working examples.
-
--   [Wasm by example](https://wasmbyexample.dev/home.en-us.html) and webassembly.org are also great resources for learning more about Web Assembly in general.
+Check the [full working implementation](https://wasm-pass.collinsmuriuki.xyz) of this project for reference. Happy coding!
