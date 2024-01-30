@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://collinsmuriuki.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://collinsmuriuki.xyz/" rel="alternate" type="text/html" /><updated>2024-01-30T19:06:19+03:00</updated><id>https://collinsmuriuki.xyz/feed.xml</id><title type="html">Collins Muriuki</title><subtitle>Understanding the universe and explaining it to a three year old.</subtitle><entry><title type="html">The Art of Avoiding Online Arguments</title><link href="https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments/" rel="alternate" type="text/html" title="The Art of Avoiding Online Arguments" /><published>2022-06-30T08:31:00+03:00</published><updated>2022-06-30T08:31:00+03:00</updated><id>https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments</id><content type="html" xml:base="https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://collinsmuriuki.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://collinsmuriuki.xyz/" rel="alternate" type="text/html" /><updated>2024-01-30T19:08:23+03:00</updated><id>https://collinsmuriuki.xyz/feed.xml</id><title type="html">Collins Muriuki</title><subtitle>Understanding the universe and explaining it to a three year old.</subtitle><entry><title type="html">The Art of Avoiding Online Arguments</title><link href="https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments/" rel="alternate" type="text/html" title="The Art of Avoiding Online Arguments" /><published>2022-06-30T08:31:00+03:00</published><updated>2022-06-30T08:31:00+03:00</updated><id>https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments</id><content type="html" xml:base="https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;In an age where the internet connects us more than ever, the temptation to engage in debates with strangers online is ever-present. Social media platforms, forums, and comment sections provide ample opportunities for discussions, but they can also be breeding grounds for heated arguments. While healthy debates can foster learning and understanding, arguing with strangers online often leads to unnecessary stress, frustration, and even hostility. In this blog post, we’ll explore why it’s wise to avoid getting entangled in online disputes, especially when it comes to topics you might be misinformed about, and how doing so can contribute to a more positive online experience.&lt;/p&gt;
 
@@ -231,23 +231,21 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
   &lt;li&gt;&lt;a href=&quot;https://webassembly.org/&quot;&gt;WebAssembly.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Check the &lt;a href=&quot;https://wasm-pass.collinsmuriuki.xyz&quot;&gt;full working implementation&lt;/a&gt; of this project for reference. Happy coding!&lt;/p&gt;</content><author><name>collinsmuriuki</name></author><category term="blog" /><category term="rust" /><category term="wasm" /><category term="react.js" /><category term="javascript" /><summary type="html">Building a Web Assembly-powered Password Generator with Rust and React</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://collinsmuriuki.xyz/assets/images/rust-ferris.jpeg" /><media:content medium="image" url="https://collinsmuriuki.xyz/assets/images/rust-ferris.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to squeeze out extra memory for your Node.js application</title><link href="https://collinsmuriuki.xyz/node-memory/" rel="alternate" type="text/html" title="How to squeeze out extra memory for your Node.js application" /><published>2018-05-23T19:00:00+03:00</published><updated>2018-05-23T19:00:00+03:00</updated><id>https://collinsmuriuki.xyz/node-memory</id><content type="html" xml:base="https://collinsmuriuki.xyz/node-memory/">&lt;p&gt;If you’re constantly building and shipping apps with Node.js, there’s a likelihood that you may run into the dreaded &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed&lt;/code&gt;. This error kills the current process hence killing your server.&lt;/p&gt;
+&lt;p&gt;Check the &lt;a href=&quot;https://wasm-pass.collinsmuriuki.xyz&quot;&gt;full working implementation&lt;/a&gt; of this project for reference. Happy coding!&lt;/p&gt;</content><author><name>collinsmuriuki</name></author><category term="blog" /><category term="rust" /><category term="wasm" /><category term="react.js" /><category term="javascript" /><summary type="html">Building a Web Assembly-powered Password Generator with Rust and React</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://collinsmuriuki.xyz/assets/images/rust-ferris.jpeg" /><media:content medium="image" url="https://collinsmuriuki.xyz/assets/images/rust-ferris.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Optimizing Node.js Memory Allocation for High-Performance Applications</title><link href="https://collinsmuriuki.xyz/node-memory/" rel="alternate" type="text/html" title="Optimizing Node.js Memory Allocation for High-Performance Applications" /><published>2018-05-23T19:00:00+03:00</published><updated>2018-05-23T19:00:00+03:00</updated><id>https://collinsmuriuki.xyz/node-memory</id><content type="html" xml:base="https://collinsmuriuki.xyz/node-memory/">&lt;p&gt;Title: Optimizing Node.js Memory Allocation for High-Performance Applications&lt;/p&gt;
 
-&lt;p&gt;This is expected if your server is performing memory intensive tasks such as transferring huge amounts of data with limited underlying resources.&lt;/p&gt;
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
-&lt;h2 id=&quot;the-v8-engine&quot;&gt;The V8 engine&lt;/h2&gt;
+&lt;p&gt;If you’re frequently developing and deploying Node.js applications, encountering the infamous &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed&lt;/code&gt; error is not uncommon. This issue arises particularly when your server engages in memory-intensive tasks, such as handling large data transfers with limited system resources.&lt;/p&gt;
 
-&lt;p&gt;Node.js is a JavaScript runtime built on top of Google’s V8 engine.&lt;/p&gt;
+&lt;h2 id=&quot;understanding-the-v8-engine&quot;&gt;Understanding the V8 Engine&lt;/h2&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;V8 is Google’s open source high-performance JavaScript and WebAssembly engine, written in C++. It is used in Chrome and in Node.js, among others. It implements ECMAScript and WebAssembly, and runs on Windows 7 or later, macOS 10.12+, and Linux systems that use x64, IA-32, ARM, or MIPS processors. V8 can run standalone, or can be embedded into any C++ application.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Node.js relies on Google’s V8 engine, an open-source, high-performance JavaScript and WebAssembly engine written in C++. Integrated into both Chrome and Node.js, V8 implements ECMAScript and WebAssembly and caters to various operating systems and processor architectures.&lt;/p&gt;
 
-&lt;p&gt;Whenever we start a process on Node, V8 allocates a specific amount of memory to it, based on your current hardware specifications.&lt;/p&gt;
+&lt;p&gt;When a Node.js process begins, V8 allocates a specific amount of memory based on your hardware specifications. Monitoring and managing this allocated memory is crucial, especially when dealing with resource-demanding applications.&lt;/p&gt;
 
-&lt;p&gt;It is possible to extract this information within Node and that should be the first thing you do if you begin to run out of memory.&lt;/p&gt;
+&lt;h2 id=&quot;checking-allocated-memory&quot;&gt;Checking Allocated Memory&lt;/h2&gt;
 
-&lt;p&gt;Start by creating an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt; script and run the code above to get the amount of memory allocated to your current process.&lt;/p&gt;
+&lt;p&gt;To gain insights into your process’s allocated memory, create an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt; script with the following code:&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;v8&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;v8&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
@@ -259,31 +257,28 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
 &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v8&lt;/code&gt; module is inbuilt into node and it contains some useful methods like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v8.getHeapStatistics()&lt;/code&gt; that allow us to get info on the heap allocated memory. I won’t dwell too much on process memory in this short blog, but you can read about it &lt;a href=&quot;https://www.guru99.com/stack-vs-heap.html&quot;&gt;here&lt;/a&gt;, so you can get a better understanding of its role, the heap specifically in this case.&lt;/p&gt;
+&lt;p&gt;This script utilizes the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v8&lt;/code&gt; module, an integral part of Node.js, offering methods like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v8.getHeapStatistics()&lt;/code&gt; to fetch heap-related memory information. For a deeper understanding of process memory, refer to &lt;a href=&quot;https://www.guru99.com/stack-vs-heap.html&quot;&gt;this resource&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;If you run your script, you should be able to see the amount of allocated memory printed out. This number varies depending on the specs you pack on your system.&lt;/p&gt;
+&lt;p&gt;Adjusting Memory Capacity:&lt;/p&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Total Heap Size is 2138706608,   GB 1.99
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;My computer memory is 8GB but V8 is currently allocating 1.99GB to this process. As you can see, we have a possible leeway to extend this capacity, that is if there are no other memory intensive processes running concurrently.&lt;/p&gt;
-
-&lt;h2 id=&quot;increase-the-capacity&quot;&gt;Increase the capacity&lt;/h2&gt;
-
-&lt;p&gt;Increasing the capacity is as simple as passing an argument as you run your script. More specifically the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--max-old-space-size&lt;/code&gt; argument, as well as specifying the amount of memory we want to allocate in kilobytes like so:&lt;/p&gt;
+&lt;p&gt;You can increase the memory capacity by using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--max-old-space-size&lt;/code&gt; argument when running your script, specifying the desired memory allocation in kilobytes:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node &lt;span class=&quot;nt&quot;&gt;--max-old-space-size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4096 index.js
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;And that’s pretty much it, we can check if this works by running our script again:&lt;/p&gt;
+&lt;p&gt;Upon rerunning the script, you should observe an augmented total heap size:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Total Heap Size is 4283117000,   GB 3.99
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We have just doubled our memory, now our processes will have a bit more breathing room.&lt;/p&gt;
+&lt;p&gt;In this example, the memory has been doubled, providing more breathing room for your processes.&lt;/p&gt;
 
-&lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h2&gt;
+&lt;h2 id=&quot;important-considerations&quot;&gt;Important Considerations&lt;/h2&gt;
 
-&lt;p&gt;Do this only if you have enough free memory. This is redundant if you try allocating 8GB to a computer with 4GB memory!&lt;/p&gt;
+&lt;p&gt;Before adjusting memory allocation, ensure you have sufficient free memory. Attempting to allocate more memory than available on your system is counterproductive.&lt;/p&gt;
 
-&lt;p&gt;In addition, refactoring your code to be more memory efficient should be your first priority before attempting this.&lt;/p&gt;</content><author><name>collinsmuriuki</name></author><category term="blog" /><category term="node" /><category term="javascript" /><summary type="html">If you’re constantly building and shipping apps with Node.js, there’s a likelihood that you may run into the dreaded FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed. This error kills the current process hence killing your server.</summary></entry></feed>
+&lt;p&gt;Moreover, prioritize refactoring your code for better memory efficiency as a primary strategy before resorting to memory allocation adjustments.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Optimizing memory allocation is a key aspect of maintaining high-performance Node.js applications. By understanding the V8 engine’s role and implementing judicious memory adjustments, you can enhance your application’s stability and responsiveness. Always balance these optimizations with efficient code practices to achieve optimal results.&lt;/p&gt;</content><author><name>collinsmuriuki</name></author><category term="blog" /><category term="node" /><category term="javascript" /><summary type="html">Title: Optimizing Node.js Memory Allocation for High-Performance Applications</summary></entry></feed>

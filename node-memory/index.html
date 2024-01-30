@@ -9,24 +9,24 @@
     <meta name=author content="Collins Muriuki">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>How to squeeze out extra memory for your Node.js application | Collins Muriuki</title>
+<title>Optimizing Node.js Memory Allocation for High-Performance Applications | Collins Muriuki</title>
 <meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="How to squeeze out extra memory for your Node.js application" />
+<meta property="og:title" content="Optimizing Node.js Memory Allocation for High-Performance Applications" />
 <meta name="author" content="collinsmuriuki" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Increase Node.js memory limit." />
-<meta property="og:description" content="Increase Node.js memory limit." />
+<meta name="description" content="Optimizing Node.js Memory Allocation for High-Performance Applications." />
+<meta property="og:description" content="Optimizing Node.js Memory Allocation for High-Performance Applications." />
 <link rel="canonical" href="https://collinsmuriuki.xyz/node-memory/" />
 <meta property="og:url" content="https://collinsmuriuki.xyz/node-memory/" />
 <meta property="og:site_name" content="Collins Muriuki" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-05-23T19:00:00+03:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="How to squeeze out extra memory for your Node.js application" />
+<meta property="twitter:title" content="Optimizing Node.js Memory Allocation for High-Performance Applications" />
 <meta name="twitter:site" content="@" />
 <meta name="twitter:creator" content="@collinsmuriuki" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"collinsmuriuki"},"dateModified":"2018-05-23T19:00:00+03:00","datePublished":"2018-05-23T19:00:00+03:00","description":"Increase Node.js memory limit.","headline":"How to squeeze out extra memory for your Node.js application","mainEntityOfPage":{"@type":"WebPage","@id":"https://collinsmuriuki.xyz/node-memory/"},"url":"https://collinsmuriuki.xyz/node-memory/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"collinsmuriuki"},"dateModified":"2018-05-23T19:00:00+03:00","datePublished":"2018-05-23T19:00:00+03:00","description":"Optimizing Node.js Memory Allocation for High-Performance Applications.","headline":"Optimizing Node.js Memory Allocation for High-Performance Applications","mainEntityOfPage":{"@type":"WebPage","@id":"https://collinsmuriuki.xyz/node-memory/"},"url":"https://collinsmuriuki.xyz/node-memory/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -497,7 +497,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
 
 
-<h1 class="title">How to squeeze out extra memory for your Node.js application</h1>
+<h1 class="title">Optimizing Node.js Memory Allocation for High-Performance Applications</h1>
 
 <span class="date">
     <time datetime="23-05-2018">Wednesday. May 23, 2018</time>
@@ -505,7 +505,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
     
 
     
-        3 mins
+        2 mins
     
 </span>
 
@@ -521,23 +521,21 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
     </div>
 
 
-<p>If you’re constantly building and shipping apps with Node.js, there’s a likelihood that you may run into the dreaded <code class="language-plaintext highlighter-rouge">FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed</code>. This error kills the current process hence killing your server.</p>
+<p>Title: Optimizing Node.js Memory Allocation for High-Performance Applications</p>
 
-<p>This is expected if your server is performing memory intensive tasks such as transferring huge amounts of data with limited underlying resources.</p>
+<h2 id="introduction">Introduction</h2>
 
-<h2 id="the-v8-engine">The V8 engine</h2>
+<p>If you’re frequently developing and deploying Node.js applications, encountering the infamous <code class="language-plaintext highlighter-rouge">FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed</code> error is not uncommon. This issue arises particularly when your server engages in memory-intensive tasks, such as handling large data transfers with limited system resources.</p>
 
-<p>Node.js is a JavaScript runtime built on top of Google’s V8 engine.</p>
+<h2 id="understanding-the-v8-engine">Understanding the V8 Engine</h2>
 
-<blockquote>
-  <p>V8 is Google’s open source high-performance JavaScript and WebAssembly engine, written in C++. It is used in Chrome and in Node.js, among others. It implements ECMAScript and WebAssembly, and runs on Windows 7 or later, macOS 10.12+, and Linux systems that use x64, IA-32, ARM, or MIPS processors. V8 can run standalone, or can be embedded into any C++ application.</p>
-</blockquote>
+<p>Node.js relies on Google’s V8 engine, an open-source, high-performance JavaScript and WebAssembly engine written in C++. Integrated into both Chrome and Node.js, V8 implements ECMAScript and WebAssembly and caters to various operating systems and processor architectures.</p>
 
-<p>Whenever we start a process on Node, V8 allocates a specific amount of memory to it, based on your current hardware specifications.</p>
+<p>When a Node.js process begins, V8 allocates a specific amount of memory based on your hardware specifications. Monitoring and managing this allocated memory is crucial, especially when dealing with resource-demanding applications.</p>
 
-<p>It is possible to extract this information within Node and that should be the first thing you do if you begin to run out of memory.</p>
+<h2 id="checking-allocated-memory">Checking Allocated Memory</h2>
 
-<p>Start by creating an <code class="language-plaintext highlighter-rouge">index.js</code> script and run the code above to get the amount of memory allocated to your current process.</p>
+<p>To gain insights into your process’s allocated memory, create an <code class="language-plaintext highlighter-rouge">index.js</code> script with the following code:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">v8</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">v8</span><span class="dl">"</span><span class="p">);</span>
 
@@ -549,34 +547,31 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 <span class="p">);</span>
 </code></pre></div></div>
 
-<p>The <code class="language-plaintext highlighter-rouge">v8</code> module is inbuilt into node and it contains some useful methods like <code class="language-plaintext highlighter-rouge">v8.getHeapStatistics()</code> that allow us to get info on the heap allocated memory. I won’t dwell too much on process memory in this short blog, but you can read about it <a href="https://www.guru99.com/stack-vs-heap.html">here</a>, so you can get a better understanding of its role, the heap specifically in this case.</p>
+<p>This script utilizes the <code class="language-plaintext highlighter-rouge">v8</code> module, an integral part of Node.js, offering methods like <code class="language-plaintext highlighter-rouge">v8.getHeapStatistics()</code> to fetch heap-related memory information. For a deeper understanding of process memory, refer to <a href="https://www.guru99.com/stack-vs-heap.html">this resource</a>.</p>
 
-<p>If you run your script, you should be able to see the amount of allocated memory printed out. This number varies depending on the specs you pack on your system.</p>
+<p>Adjusting Memory Capacity:</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Heap Size is 2138706608,   GB 1.99
-</code></pre></div></div>
-
-<p>My computer memory is 8GB but V8 is currently allocating 1.99GB to this process. As you can see, we have a possible leeway to extend this capacity, that is if there are no other memory intensive processes running concurrently.</p>
-
-<h2 id="increase-the-capacity">Increase the capacity</h2>
-
-<p>Increasing the capacity is as simple as passing an argument as you run your script. More specifically the <code class="language-plaintext highlighter-rouge">--max-old-space-size</code> argument, as well as specifying the amount of memory we want to allocate in kilobytes like so:</p>
+<p>You can increase the memory capacity by using the <code class="language-plaintext highlighter-rouge">--max-old-space-size</code> argument when running your script, specifying the desired memory allocation in kilobytes:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node <span class="nt">--max-old-space-size</span><span class="o">=</span>4096 index.js
 </code></pre></div></div>
 
-<p>And that’s pretty much it, we can check if this works by running our script again:</p>
+<p>Upon rerunning the script, you should observe an augmented total heap size:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Heap Size is 4283117000,   GB 3.99
 </code></pre></div></div>
 
-<p>We have just doubled our memory, now our processes will have a bit more breathing room.</p>
+<p>In this example, the memory has been doubled, providing more breathing room for your processes.</p>
 
-<h2 id="disclaimer">Disclaimer</h2>
+<h2 id="important-considerations">Important Considerations</h2>
 
-<p>Do this only if you have enough free memory. This is redundant if you try allocating 8GB to a computer with 4GB memory!</p>
+<p>Before adjusting memory allocation, ensure you have sufficient free memory. Attempting to allocate more memory than available on your system is counterproductive.</p>
 
-<p>In addition, refactoring your code to be more memory efficient should be your first priority before attempting this.</p>
+<p>Moreover, prioritize refactoring your code for better memory efficiency as a primary strategy before resorting to memory allocation adjustments.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Optimizing memory allocation is a key aspect of maintaining high-performance Node.js applications. By understanding the V8 engine’s role and implementing judicious memory adjustments, you can enhance your application’s stability and responsiveness. Always balance these optimizations with efficient code practices to achieve optimal results.</p>
 
 
 
@@ -683,7 +678,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
             <!-- If site width is set to normal, you may choose any two share links -->
             <a
                 class="twitter"
-                href="https://twitter.com/intent/tweet?text=https://collinsmuriuki.xyz/node-memory/ - How to squeeze out extra memory for your Node.js application by @c12i_"
+                href="https://twitter.com/intent/tweet?text=https://collinsmuriuki.xyz/node-memory/ - Optimizing Node.js Memory Allocation for High-Performance Applications by @c12i_"
             >
                 <svg class="icon icon-twitter">
                     <use xlink:href="#icon-twitter"></use></svg
@@ -700,11 +695,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
                 ><span class="icon-facebook-rect">Share</span>
             </a>
 
-            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://collinsmuriuki.xyz/node-memory/&amp;title=How to squeeze out extra memory for your Node.js application&amp;summary=Increase Node.js memory limit.&amp;source=https://collinsmuriuki.xyz" target="_blank">
+            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://collinsmuriuki.xyz/node-memory/&amp;title=Optimizing Node.js Memory Allocation for High-Performance Applications&amp;summary=Optimizing Node.js Memory Allocation for High-Performance Applications.&amp;source=https://collinsmuriuki.xyz" target="_blank">
                 <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg><span class="icon-linkedin">Share</span>
             </a> -->
 
-            <!-- <a class="reddit" href="https://reddit.com/submit?url=https://collinsmuriuki.xyz/node-memory/&amp;title=How to squeeze out extra memory for your Node.js application" target="_blank">
+            <!-- <a class="reddit" href="https://reddit.com/submit?url=https://collinsmuriuki.xyz/node-memory/&amp;title=Optimizing Node.js Memory Allocation for High-Performance Applications" target="_blank">
                 <svg class="icon icon-reddit"><use xlink:href="#icon-reddit"></use></svg><span class="icon-reddit">Share</span>
             </a> -->
         </div>
