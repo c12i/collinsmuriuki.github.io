@@ -18,6 +18,6 @@ Collins is a Nairobi-based programmer passionate about writing efficient code an
 	<li>Golang</li>
 	<li>Docker / Swarm / Kubernetes / Terraform</li>
 	<li>HTTP / REST / GraphQL / gRPC</li>
-	<li>PostgreSQL / MySQL / Redis</li>
+	<li>Postgres / MySQL / Redis</li>
 </ul>
 
