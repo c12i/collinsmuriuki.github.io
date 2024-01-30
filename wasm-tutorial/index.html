@@ -498,8 +498,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
 
 
-    <img class="title-image" src="/assets/images/rust-ferris.jpeg" alt="Building a Web Assembly powered password generator">
-
 
 <h1 class="title">Building a Web Assembly powered password generator</h1>
 
@@ -509,7 +507,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
     
 
     
-        21 mins
+        6 mins
     
 </span>
 
@@ -529,80 +527,64 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
     </div>
 
 
-<p>In this tutorial, we will be building a simple npm package with Rust and Web Assembly and testing it out on a React application.</p>
+<h1 id="building-a-web-assembly-powered-password-generator-with-rust-and-react">Building a Web Assembly-powered Password Generator with Rust and React</h1>
 
-<h2 id="some-context">Some context</h2>
+<h2 id="introduction">Introduction</h2>
 
-<p>Over the past few years, a popular trend in web development is emerging where developers write code in low level languages and compile it to a format that can be executed on the browser alongside JavaScript. That’s the high-level concept behind Web Assembly.</p>
+<p>In this tutorial, we will explore the fascinating intersection of Rust, Web Assembly (Wasm), and React by building a simple password generator. We’ll leverage the speed and performance benefits of Rust, compile it into Wasm, and seamlessly integrate it into a React application. By the end of this project, you’ll have a clear understanding of how these technologies work together.</p>
 
-<blockquote>
-  <p><em>But What exactly is it and why use the Rust programming language?</em></p>
-</blockquote>
+<h2 id="why-rust-and-web-assembly">Why Rust and Web Assembly?</h2>
 
-<p>Web Assembly (wasm) is a simple machine model and executable format with an extensive specification. It is designed to be portable, compact and execute at or near native speeds and is a compilation target for languages such as Rust, C, C++ and more.</p>
-
-<p>Rust, on the other hand, is a blazingly fast systems language which gives developers low-level control and reliable performance. It lacks a garbage collector which slows down high-level languages like JavaScript.</p>
-
-<p>The benefit of using Rust with Web Assembly is just how simple the developer experience is! Integration with and support for popular tools in the JavaScript ecosystem such as npm and web-pack make it very developer friendly.</p>
-
-<p>To demonstrate this, we will be building a simple password generator program in Rust, compiling that code into Web Assembly and publishing the resulting package to npm to be used by other developers. As a bonus, we will also be creating a bear-bones React application which will make use of our package. By the end of this project, the interplay between these technologies will be vivid.</p>
+<p>Web Assembly is a low-level virtual machine that allows executing code at near-native speeds within web browsers. Rust, known for its speed and memory safety, is an ideal language for Wasm. Unlike high-level languages like JavaScript, Rust provides developers with low-level control and reliable performance, making it an excellent choice for Wasm.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
+<p>Before we dive into the project, ensure you have the following tools and knowledge:</p>
+
 <ul>
-  <li>Rust and Cargo: Cargo is Rust’s package manager and build tool, sort of what npm is to Node. You can install both by following this <a href="https://www.rust-lang.org/tools/install">link</a>.</li>
-  <li>wasm-pack: This is the one-stop shop tool for building and working with rust-generated Web Assembly, will definitely save us from writing a lot of boiler-plate code and potentially running into bugs. You can install by following this <a href="https://rustwasm.github.io/wasm-pack/installer/">link</a>.</li>
-  <li>A <a href="https://nodejs.org/en/">node.js</a>) installation</li>
-  <li>Some Rust and JavaScript/ React.js knowledge will be a plus</li>
+  <li>Rust and Cargo: Install them using <a href="https://www.rust-lang.org/tools/install">this link</a>.</li>
+  <li>wasm-pack: A tool for building and working with Rust-generated Web Assembly. Install it <a href="https://rustwasm.github.io/wasm-pack/installer/">here</a>.</li>
+  <li>Node.js: Required for React development. Install it from <a href="https://nodejs.org/en/">nodejs.org</a>.</li>
+  <li>Basic knowledge of Rust and JavaScript/React.js.</li>
 </ul>
 
-<h2 id="initializing-our-rust-project-with-wasm-pack">Initializing our Rust project with wasm-pack</h2>
+<h2 id="initializing-the-rust-project">Initializing the Rust Project</h2>
 
-<p>Starting a Rust Web Assembly project is as simple as running the following command in your terminal:</p>
+<p>Let’s start by creating a new Rust Web Assembly project using the following command:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wasm-pack new wasm_pass
 </code></pre></div></div>
 
-<p>The outcome of running this is basically a Cargo generated Rust library crate with web-assembly batteries included. This means we are still able to add external crates/ libraries into the generated project, something we will get to later on.</p>
+<p>This command generates a Rust library crate with Web Assembly support. The crucial files are <code class="language-plaintext highlighter-rouge">Cargo.toml</code>, <code class="language-plaintext highlighter-rouge">src/lib.rs</code>, and <code class="language-plaintext highlighter-rouge">src/utils.rs</code>.</p>
 
-<h2 id="dissecting-the-boilerplate">Dissecting the boilerplate</h2>
+<h2 id="dissecting-the-boilerplate">Dissecting the Boilerplate</h2>
 
-<p>Let’s enter into our project and see what we have:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>wasm_pass
-</code></pre></div></div>
-
-<p>Below is the file tree of our generated project; the most important files we will focus on are the Cargo.toml and src/lib.rs:</p>
+<p>Explore the generated project structure:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wasm_pass/
 ├── Cargo.toml
 ├── LICENSE_APACHE
 ├── LICENSE_MIT
 ├── README.md
-    └── src
-        ├── lib.rs
-        └── utils.rs
+└── src
+    ├── lib.rs
+    └── utils.rs
 </code></pre></div></div>
 
-<p><em>src/Cargo.toml</em></p>
+<ul>
+  <li><strong>Cargo.toml</strong>: Contains project dependencies and metadata.</li>
+  <li><strong>lib.rs</strong>: The root of the crate, compiled into Web Assembly.</li>
+  <li><strong>utils.rs</strong>: Includes debugging utilities (not used in this project).</li>
+</ul>
 
-<p>The Cargo.toml file contains the dependencies of our project as well as metadata for our crate. Since our crate was generated by wasm-pack, we get wasm-bindgen already preconfigured for us.</p>
+<h2 id="initial-build">Initial Build</h2>
 
-<p><em>src/lib.rs</em></p>
+<p>Build the project using:</p>
 
-<p>This is root of our crate which will be ultimately compiled to Web Assembly. The preconfigured wasm_bindgen crate allows us to interface our Rust code with JavaScript by simply adding the #[wasm_bindgen] attribute to any Rust code we would like to expose to JavaScript. The existing code imports the window.alert JavaScript function and exports a greet function.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wasm-pack build
+</code></pre></div></div>
 
-<p><em>src/utils.rs</em></p>
-
-<p>This module contains some useful debugging utilities for our compiled Web Assembly, we won’t be making use of this module during this project.</p>
-
-<h2 id="initial-build">Initial build</h2>
-
-<p>To get a better understanding of how we compile our Rust code to Web Assembly and have it exposed to JavScript, we will first build the example Rust code generated by wasm-pack and see what we get:</p>
-
-<p><em>wasm-pack build</em></p>
-
-<p>When this is complete, you you should expect a pkg directory to be generated at the root of our project with the following build artefacts inside:</p>
+<p>This creates a <code class="language-plaintext highlighter-rouge">pkg</code> directory with the following artifacts:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkg/
 ├── package.json
@@ -612,75 +594,20 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 └── wasm_pass.js
 </code></pre></div></div>
 
-<p>wasm-pack does a great job at bundling our resulting artefacts into a “npm publishable” state as you can see. The README.md is simply a copy of our main project’s README.md. Let’s break down the rest of the files in more detail.</p>
+<p>These files enable npm integration and contain the compiled Web Assembly code.</p>
 
-<p><em>pkg/wasm_pass.wasm</em></p>
+<h2 id="writing-rust-code">Writing Rust Code</h2>
 
-<p>This is the Web Assembly binary generated by the Rust compiler from our code in src/lib.rs. It simply contains all our Rust functions we had wrapped with the #[wasm_bindgen] attribute compiled to wasm!</p>
-
-<p><em>pkg/wasm_pass.js</em></p>
-
-<p>This file is generated by wasm-bindgen and contains JavaScript code which acts as the intermediary between JavaScript and Rust by allowing importation of DOM and JavaScript functions into Rust and creating a JavaScript friendly API from our web assembly functions.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">wasm</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./wasm_pass_bg’;
-
-// …
-
-export function greet() {
-    return wasm.greet();
-}
-</span></code></pre></div></div>
-
-<p><em>pkg/wasm_pass.d.ts</em></p>
-
-<p>The .d.ts contains TypeScript type declarations for those who will be using TypeScript. Therefore, calls to our Web Assembly code will be type-checked and you will get nice features such as intellisense and auto-completion depending on the IDE you use.</p>
-
-<p><em>pkg/package.json</em></p>
-
-<p>The package.json file contains meta-data about the generated JavaScript and WebAssembly package. This helps integrate with JavaScript tooling and allow us to publish our package to npm.</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wasm-pass"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"collaborators"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Your Name &lt;your.email@example.com&gt;"</span><span class="p">],</span><span class="w">
-    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"wasm_pass_bg.wasm"</span><span class="p">,</span><span class="w"> </span><span class="s2">"wasm_pass.js"</span><span class="p">,</span><span class="w"> </span><span class="s2">"wasm_pass.d.ts"</span><span class="p">],</span><span class="w">
-    </span><span class="nl">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wasm_pass.js"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"types"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wasm_pass.d.ts"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"sideEffects"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
-<h1 id="writing-some-rust">Writing some Rust</h1>
-
-<h2 id="adding-an-external-crate">Adding an external crate</h2>
-
-<p>First thing we want to do first is add an external crate to our project.</p>
-
-<p>Installing external libraries or crates, as they are referred to in the Rust community, is as easy as specifying the name and version of the library we would like to use under the dependencies column of our Cargo.toml like so:</p>
-
-<p><em>Cargo.toml</em></p>
+<p>Update the <code class="language-plaintext highlighter-rouge">Cargo.toml</code> file to include the <code class="language-plaintext highlighter-rouge">rand</code> crate:</p>
 
 <div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[dependencies]</span>
 <span class="py">wasm-bindgen</span> <span class="p">=</span> <span class="s">"0.2.63"</span>
 <span class="nn">rand</span> <span class="o">=</span> <span class="p">{</span> <span class="py">version</span> <span class="p">=</span> <span class="s">"0.7.3"</span><span class="p">,</span> <span class="py">features</span> <span class="p">=</span> <span class="nn">["wasm-bindgen"]</span> <span class="p">}</span>
 </code></pre></div></div>
 
-<p>Here we add the rand crate <code class="language-plaintext highlighter-rouge">version = "0.7.3"</code> to our dependencies.</p>
+<p>This adds the random number generation utility to our project. Run <code class="language-plaintext highlighter-rouge">cargo build</code> to download the new dependency.</p>
 
-<p>We also include a feature flag; <code class="language-plaintext highlighter-rouge">features=["wasm-bindgen"]</code> in order to get a version of the rand crate which is can be compiled into Web Assembly.</p>
-
-<p>The rand crate provides utilities to generate random numbers and convert them to useful types, we will be making use of this in our password generator program.</p>
-
-<p>Lets build our project to download our newly added external crate.</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cargo build
-</code></pre></div></div>
-
-<h2 id="implementing-our-password-generator-logic">Implementing our password generator logic</h2>
-
-<p>Now that we have the rand crate installed, we can bring it into the scope of our code in <code class="language-plaintext highlighter-rouge">src/lib.rs</code>. All functionality provided by the crate will be accessible through the crate’s name, in this case rand. We are particularly interested in the Rng trait provided by the crate, we can access it by bringing it into scope using the use keyword:</p>
-
-<p><em>src/lib.rs</em></p>
+<p>Implement the password generator logic in <code class="language-plaintext highlighter-rouge">src/lib.rs</code>:</p>
 
 <div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">use</span> <span class="nn">wasm_bindgen</span><span class="p">::</span><span class="nn">prelude</span><span class="p">::</span><span class="o">*</span><span class="p">;</span>
 <span class="k">use</span> <span class="nn">rand</span><span class="p">::</span><span class="n">Rng</span><span class="p">;</span>
@@ -703,261 +630,58 @@ export function greet() {
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>To make keep things clean, I have deleted a lot of the default code generated by wasm-pack since we won’t be needing it any more. I also added a public generate function which takes a single argument <code class="language-plaintext highlighter-rouge">len</code> of type <code class="language-plaintext highlighter-rouge">usize</code> and returns a <code class="language-plaintext highlighter-rouge">String</code>.</p>
+<p>This function generates a random password of the specified length using the <code class="language-plaintext highlighter-rouge">rand</code> crate.</p>
 
-<p>If you are unfamiliar with the Rust syntax, <code class="language-plaintext highlighter-rouge">usize</code> is an unsigned integer type which counts how many bytes it takes to reference a location in memory.</p>
+<h2 id="testing-the-code">Testing the Code</h2>
 
-<p>Inside our function we create a <code class="language-plaintext highlighter-rouge">CHARSET</code> constant of type <code class="language-plaintext highlighter-rouge">&amp;[u8]</code>, simply a reference to an array of unsigned 8bit integers. In Rust, u8 integers can store numbers from 0 to 2^8 - 1, which is bascally numbers from 0 to 255. We set the value of this constant as a string slice of letters and symbols converted to a byte array through calling the method <code class="language-plaintext highlighter-rouge">as_bytes</code>.</p>
+<p>Write a test for the <code class="language-plaintext highlighter-rouge">generate</code> function in <code class="language-plaintext highlighter-rouge">src/lib.rs</code>:</p>
 
-<p>We create a mutable <code class="language-plaintext highlighter-rouge">rng</code> variable where we make use of the rand crate’s <code class="language-plaintext highlighter-rouge">thread_rng</code> function to create our random number generator, an instance of the <code class="language-plaintext highlighter-rouge">ThreadRng</code> struct, which contains useful methods that generate random numbers for us. We then create a password variable and annotate it’s type as a String, what we expect as the final outcome of this operation.</p>
-
-<p>We then make use of Rust’s functional programming features by calling the <code class="language-plaintext highlighter-rouge">map</code> method on a range of numbers between 0 and the user provided len value. For each number within this range, we call a closure where we declare a variable idx which contains a random generated number between 0 and the length of the <code class="language-plaintext highlighter-rouge">CHARSET</code> byte array, through calling the <code class="language-plaintext highlighter-rouge">gen_range</code> method. The closure returns the <code class="language-plaintext highlighter-rouge">&amp;u8</code> integer at the <code class="language-plaintext highlighter-rouge">idx</code> index of the <code class="language-plaintext highlighter-rouge">CHARSET</code> byte array type casted to a char type.</p>
-
-<p>We finally call the <code class="language-plaintext highlighter-rouge">collect</code> method to transform the output from the iterator into a collection, which is a <code class="language-plaintext highlighter-rouge">String</code> in this case. This is what we eventually return from our function.</p>
-
-<h2 id="testing-our-code">Testing our code</h2>
-
-<p>It is always best practice to test code before we ship it, let’s go ahead and write a simple unit-test for our generate function. Feel free to delete the default tests/ directory generated by wasm-pack at this point since it is redundant to us now.</p>
-
-<p>We will write our tests in the same module where our generate function is declared, a popular convention in Rust:</p>
-
-<p><em>src/lib.rs</em></p>
-
-<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">//...our function</span>
-
-<span class="nd">#[cfg(test)]</span>
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">#[cfg(test)]</span>
 <span class="k">mod</span> <span class="n">tests</span> <span class="p">{</span>
     <span class="k">use</span> <span class="nn">super</span><span class="p">::</span><span class="n">generate</span><span class="p">;</span>
+
     <span class="nd">#[test]</span>
     <span class="k">fn</span> <span class="nf">test_generate</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">let</span> <span class="n">password</span> <span class="o">=</span> <span class="nf">generate</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
-        <span class="nd">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
         <span class="nd">assert_eq!</span><span class="p">(</span><span class="n">password</span><span class="nf">.len</span><span class="p">(),</span> <span class="mi">20</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>We first create a tests module using the mod keyword and use the <code class="language-plaintext highlighter-rouge">#[cfg(test)]</code> attribute to basically to have this module only compiled when we run tests. Inside the module, we import our generate function from the outer scope.</p>
-
-<p>We write a test function test_generate, which we mark with the <code class="language-plaintext highlighter-rouge">#[test]</code> attribute to inform the test runner to treat this function as a test. Inside our function, we declare a password variable which we assign to the result of a call to our generate function, where we pass 20 as a parameter, since we want to generate a password with twenty characters.</p>
-
-<p>We then write a print statement with Rust’s <code class="language-plaintext highlighter-rouge">println!</code> macro so we can see our generated password printed on the standard output. Finally, we use another Rust macro <code class="language-plaintext highlighter-rouge">assert_eq!</code> to assert that the length of the password which is generated by our function is equal to 20.</p>
-
-<h2 id="now-we-can-run-our-tests">Now we can run our tests:</h2>
+<p>Run the tests with:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cargo <span class="nb">test</span> <span class="nt">--</span> <span class="nt">--show-output</span>
 </code></pre></div></div>
 
-<p>Note that we add the <code class="language-plaintext highlighter-rouge">--show-output flag</code>, in order to be able to see what is printed into the standard output as our tests run.</p>
+<p>Ensure the tests pass, confirming the functionality of the password generator.</p>
 
-<p>When we run the tests, we should see the following output:</p>
+<h2 id="implementing-web-assembly-in-a-react-app">Implementing Web Assembly in a React App</h2>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>running 1 <span class="nb">test
-
-test </span>tests::test_generate ... ok
-
-successes:
-
-<span class="nt">----</span> tests::test_generate stdout <span class="nt">----</span>
-
-ZCoNq~!WT7V#AmL9GvmP
-
-successes:
-
-tests::test_generate
-
-<span class="nb">test </span>result: ok. 1 passed<span class="p">;</span> 0 failed<span class="p">;</span> 0 ignored<span class="p">;</span> 0 measured<span class="p">;</span> 0 filtered out
-</code></pre></div></div>
-
-<p>Our tests are successful! We are also able to see our random password printed out on the standard output! Now we can compile our Rust code into Web Assembly by running our trusty build command yet again:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wasm-pack build
-</code></pre></div></div>
-
-<h2 id="note">Note!</h2>
-
-<p>Incase you run into an error message reminding you to disable <code class="language-plaintext highlighter-rouge">wasm-opt</code> while attempting to compile your code, you can fix it by updating your <code class="language-plaintext highlighter-rouge">Cargo.toml</code> with the following:</p>
-
-<p><em>Cargo.toml</em></p>
-
-<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[package.metadata.wasm-pack.profile.release]</span>
-<span class="py">wasm-opt</span> <span class="p">=</span> <span class="kc">false</span>
-</code></pre></div></div>
-
-<p>This will disable <code class="language-plaintext highlighter-rouge">wasm-pack</code> Web Assembly optimization for the release profile, which is tolerable for our simple project.</p>
-
-<p>You can then proceed to build your package again.</p>
-
-<h2 id="implementing-web-assembly-on-a-react-application">Implementing Web Assembly on a React application</h2>
-
-<p>We are now going to try out our new package on a bare-bones React application to see the integration of Web Assembly and modern front-end technologies at play.</p>
-
-<p>In the root of our main project, we will first create a app directory, which will contain our React application, and <code class="language-plaintext highlighter-rouge">cd</code> into it.</p>
+<p>Create a React app in the <code class="language-plaintext highlighter-rouge">app</code> directory:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>app
 <span class="nb">cd </span>app
-</code></pre></div></div>
-
-<p>Inside, we will create a <code class="language-plaintext highlighter-rouge">src</code> directory and we also create a <code class="language-plaintext highlighter-rouge">.gitignore</code> file with <code class="language-plaintext highlighter-rouge">node_modules</code> inside:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>src
+<span class="nb">mkdir </span>src
 <span class="nb">echo</span> <span class="s2">"/node_modules"</span> <span class="o">&gt;</span> .gitignore
+npm init <span class="nt">-y</span>
 </code></pre></div></div>
 
-<p>We then initialize an npm package with default options by running:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm init <span class="nt">-y</span>
-</code></pre></div></div>
-
-<p>Next, we install React, Babel, webpack and <em>a few</em> other webpack plugins:</p>
+<p>Install necessary dependencies:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">--save</span> react react-dom
-
 npm <span class="nb">install</span> <span class="nt">--save-dev</span> @babel/core @babel/preset-env @babel/preset-react babel-loader webpack webpack-cli webpack-dev-server html-webpack-plugin style-loader css-loader html-loader
 </code></pre></div></div>
 
-<p>We then create a <code class="language-plaintext highlighter-rouge">index.html</code> file at the root of our app directory and add the following:</p>
+<p>Create the React app files: <code class="language-plaintext highlighter-rouge">index.html</code>, <code class="language-plaintext highlighter-rouge">index.js</code>, and <code class="language-plaintext highlighter-rouge">App.js</code>. Configure Babel with <code class="language-plaintext highlighter-rouge">.babelrc</code> and Webpack with <code class="language-plaintext highlighter-rouge">webpack.config.js</code>.</p>
 
-<p><em>app/index.html</em></p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"ie=edge"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>wasm-pass<span class="nt">&lt;/title&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'root'</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div></div>
-
-<p>In the src directory, we add an <code class="language-plaintext highlighter-rouge">index.js</code>, which will serve as the entry point to our React application:</p>
-
-<p><em>app/src/index.js</em></p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
-<span class="k">import</span> <span class="nx">ReactDOM</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-dom</span><span class="dl">"</span><span class="p">;</span>
-<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./App.js</span><span class="dl">"</span><span class="p">;</span>
-
-<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">root</span><span class="dl">"</span><span class="p">));</span>
-</code></pre></div></div>
-
-<p>We will also need to create a <code class="language-plaintext highlighter-rouge">App.js</code> file in the src directory which will contain our App component:</p>
-
-<p><em>app/src/App.js</em></p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="k">from</span> <span class="nx">React</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span><span class="err">;
-</span><span class="p">};</span>
-
-<span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Now we can create a <code class="language-plaintext highlighter-rouge">.babelrc</code> file at the root of our app directory:</p>
-
-<p><em>app/.babelrc</em></p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
-  <span class="dl">"</span><span class="s2">presets</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">@babel/preset-env</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">@babel/preset-react</span><span class="dl">"</span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>We proceed to add a <code class="language-plaintext highlighter-rouge">webpack.config.js</code> file also at the root of our app directory (don’t worry too much about it’s content):</p>
-
-<p><em>app/webpack.config.js</em></p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">html-webpack-plugin</span><span class="dl">"</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">path</span><span class="dl">"</span><span class="p">);</span>
-
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="na">entry</span><span class="p">:</span> <span class="dl">"</span><span class="s2">./src/index.js</span><span class="dl">"</span><span class="p">,</span>
-    <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">dist</span><span class="dl">"</span><span class="p">),</span>
-        <span class="na">filename</span><span class="p">:</span> <span class="dl">"</span><span class="s2">index.js</span><span class="dl">"</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">rules</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">js|jsx</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
-                <span class="na">exclude</span><span class="p">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
-                <span class="na">use</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="na">loader</span><span class="p">:</span> <span class="dl">"</span><span class="s2">babel-loader</span><span class="dl">"</span><span class="p">,</span>
-                <span class="p">},</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">css$/</span><span class="p">,</span>
-                <span class="na">use</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">style-loader</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">css-loader</span><span class="dl">"</span><span class="p">],</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">s</span><span class="se">[</span><span class="sr">ac</span><span class="se">]</span><span class="sr">ss$/i</span><span class="p">,</span>
-                <span class="na">use</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">style-loader</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">css-loader</span><span class="dl">"</span><span class="p">],</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">html$/</span><span class="p">,</span>
-                <span class="na">use</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="na">loader</span><span class="p">:</span> <span class="dl">"</span><span class="s2">html-loader</span><span class="dl">"</span><span class="p">,</span>
-                <span class="p">},</span>
-            <span class="p">},</span>
-        <span class="p">],</span>
-    <span class="p">},</span>
-    <span class="na">mode</span><span class="p">:</span> <span class="dl">"</span><span class="s2">development</span><span class="dl">"</span><span class="p">,</span>
-    <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
-        <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
-            <span class="na">template</span><span class="p">:</span> <span class="dl">"</span><span class="s2">./index.html</span><span class="dl">"</span><span class="p">,</span>
-        <span class="p">}),</span>
-    <span class="p">],</span>
-<span class="p">};</span>
-</code></pre></div></div>
-
-<p>Finally, we add a start and build script to our package.json</p>
-
-<p><em>app/package.json</em></p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">//</span><span class="w"> </span><span class="err">...</span><span class="w">
-</span><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack-dev-server --open"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack --config webpack.config.js"</span><span class="p">,</span><span class="w">
-</span><span class="p">}</span><span class="err">,</span><span class="w">
-</span><span class="err">//</span><span class="w"> </span><span class="err">...</span><span class="w">
-</span></code></pre></div></div>
-
-<p>We can start our webpack server by running:</p>
+<p>Finally, run the development server:</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm start
 </code></pre></div></div>
 
-<p>Our React app is now running on <code class="language-plaintext highlighter-rouge">http://localhost:8080</code>!</p>
+<h2 id="using-the-package-in-react">Using the Package in React</h2>
 
-<h2 id="using-our-package">Using our package</h2>
-
-<p>Now that we have our React app working, we can test our <code class="language-plaintext highlighter-rouge">wasm-pass</code> package inside it. To avoid any conflicts in the name you chose for your npm package, we will use the local package in the <code class="language-plaintext highlighter-rouge">pkg</code> directory instead. We add it as a dependency in our package.json like so:</p>
-
-<p><em>app/package.json</em></p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">//...</span><span class="w">
- </span><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="err">//</span><span class="w"> </span><span class="err">...</span><span class="w">
-    </span><span class="nl">"wasm-pass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"file:../pkg/wasm_pass"</span><span class="w">
-  </span><span class="p">}</span><span class="err">,</span><span class="w">
-</span><span class="err">//...</span><span class="w">
-</span></code></pre></div></div>
-
-<p>Since we are importing our package locally, we set the version as a file referencing the location of our wasm-pack generated <code class="language-plaintext highlighter-rouge">pkg</code> directory content.</p>
-
-<p>Finally, run npm install to have it saved in our node_modules:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span>
-</code></pre></div></div>
-
-<p>Let’s now update our App component:</p>
-
-<p><em>app/src/App.js</em></p>
+<p>Update the <code class="language-plaintext highlighter-rouge">App.js</code> file to use the Rust-generated Web Assembly package:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useCallback</span><span class="p">,</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react</span><span class="dl">"</span><span class="p">;</span>
 
@@ -981,6 +705,7 @@ npm <span class="nb">install</span> <span class="nt">--save-dev</span> @babel/co
     <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
         <span class="nx">generatePassword</span><span class="p">()</span>
     <span class="p">},</span> <span class="p">[</span><span class="nx">input</span><span class="p">]);</span>
+
     <span class="k">return</span> <span class="p">(</span>
         <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
             <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Enter</span> <span class="nx">password</span> <span class="na">length</span><span class="p">:</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
@@ -995,49 +720,21 @@ npm <span class="nb">install</span> <span class="nt">--save-dev</span> @babel/co
 <span class="k">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
 </code></pre></div></div>
 
-<p>There are a couple of important changes in this file. First, we import the <code class="language-plaintext highlighter-rouge">useState</code>, <code class="language-plaintext highlighter-rouge">useCallback</code> and <code class="language-plaintext highlighter-rouge">useEffect</code> hooks from react for simple state management, memoization and performing of side effects.</p>
-
-<p>This component also contains an input field for entering the desired length of the password and a button whose click event is handled by our <code class="language-plaintext highlighter-rouge">generatePassword</code> callback.</p>
-
-<p>We create our <code class="language-plaintext highlighter-rouge">generatePassword</code> callback using React’s <code class="language-plaintext highlighter-rouge">useCallback</code> hook to memoize the password generation logic from web assembly with the <code class="language-plaintext highlighter-rouge">input</code> state value as our dependency. We also import our <code class="language-plaintext highlighter-rouge">wasm-pass</code> package here. Notice how we use the <code class="language-plaintext highlighter-rouge">import</code> function rather than the regular ES6 <code class="language-plaintext highlighter-rouge">import</code> syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a <code class="language-plaintext highlighter-rouge">Promise</code>, therefore to gain access to our <code class="language-plaintext highlighter-rouge">wasm-pass</code> module, we use the <code class="language-plaintext highlighter-rouge">Promise.then</code> syntax. We <code class="language-plaintext highlighter-rouge">alert</code> any error we catch.</p>
-
-<p>Inside this callback, we call the <code class="language-plaintext highlighter-rouge">generate</code> function from our wasm module which in turn updates the password state via <code class="language-plaintext highlighter-rouge">setPassword</code>. We also call <code class="language-plaintext highlighter-rouge">parseInt</code> to cast our numeric string <code class="language-plaintext highlighter-rouge">input</code> to a number.</p>
-
-<p>Finally, we call the <code class="language-plaintext highlighter-rouge">useEffect</code> hook and subscribe to any changes to our input state, where we call our  <code class="language-plaintext highlighter-rouge">generatePassword</code> function as a side effect.</p>
-
-<p>The final password is displayed in a <code class="language-plaintext highlighter-rouge">strong</code> tag.</p>
-
-<p>Let’s run our dev server once again and see what we get:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm start
-</code></pre></div></div>
-
-<p><img src="https://res.cloudinary.com/collinsmuriuki/image/upload/v1607412908/working_5254a3d015.gif" alt="working.gif" /></p>
-
-<p>Our simple password generator is working!</p>
+<p>This React component allows users to input a password length, click a button, and receive a randomly generated password from the Rust Web Assembly package.</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>There’s so much more we can do with Rust and Web Assembly, we have barely scratched the surface! This tutorial hopefully shows how we transition from Rust to JavaScript through Web Assembly, and how we can implement a Web Assembly generated npm package on a React application.</p>
-
-<p>A full working implementation of this project can be found <a href="https://wasm-pass.collinsmuriuki.xyz">here</a>.</p>
-
-<p>Here are some good resources if you wish to learn more about Rust and Web Assembly:</p>
+<p>This tutorial showcases the integration of Rust and Web Assembly in a React application, providing a powerful blend of performance and modern front-end technologies. Explore further resources to deepen your understanding of Rust and Web Assembly:</p>
 
 <ul>
-  <li>
-    <p><a href="https://doc.rust-lang.org/book/">The Rust Book</a> is the go to resource if you wish to familiarize yourself with the Rust programming language</p>
-  </li>
-  <li>
-    <p>For experienced Rust developers who would like to dip their toes into Web Assembly, consider checking out <a href="https://rustwasm.github.io/docs/book/">the rustwasm book</a></p>
-  </li>
-  <li>
-    <p><a href="https://rustwasm.github.io/docs/wasm-bindgen/introduction.html">wasm-bindgen</a> is another awesome resource I recommend going through, the content is extensive with good working examples.</p>
-  </li>
-  <li>
-    <p><a href="https://wasmbyexample.dev/home.en-us.html">Wasm by example</a> and webassembly.org are also great resources for learning more about Web Assembly in general.</p>
-  </li>
+  <li><a href="https://doc.rust-lang.org/book/">The Rust Book</a></li>
+  <li><a href="https://rustwasm.github.io/docs/book/">Rust and Web Assembly Book</a></li>
+  <li><a href="https://rustwasm.github.io/docs/wasm-bindgen/introduction.html">wasm-bindgen Documentation</a></li>
+  <li><a href="https://wasmbyexample.dev/home.en-us.html">Wasm By Example</a></li>
+  <li><a href="https://webassembly.org/">WebAssembly.org</a></li>
 </ul>
+
+<p>Check the <a href="https://wasm-pass.collinsmuriuki.xyz">full working implementation</a> of this project for reference. Happy coding!</p>
 
 
 

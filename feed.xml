@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://collinsmuriuki.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://collinsmuriuki.xyz/" rel="alternate" type="text/html" /><updated>2024-01-30T19:02:24+03:00</updated><id>https://collinsmuriuki.xyz/feed.xml</id><title type="html">Collins Muriuki</title><subtitle>Understanding the universe and explaining it to a three year old.</subtitle><entry><title type="html">The Art of Avoiding Online Arguments</title><link href="https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments/" rel="alternate" type="text/html" title="The Art of Avoiding Online Arguments" /><published>2022-06-30T08:31:00+03:00</published><updated>2022-06-30T08:31:00+03:00</updated><id>https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments</id><content type="html" xml:base="https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://collinsmuriuki.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://collinsmuriuki.xyz/" rel="alternate" type="text/html" /><updated>2024-01-30T19:05:33+03:00</updated><id>https://collinsmuriuki.xyz/feed.xml</id><title type="html">Collins Muriuki</title><subtitle>Understanding the universe and explaining it to a three year old.</subtitle><entry><title type="html">The Art of Avoiding Online Arguments</title><link href="https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments/" rel="alternate" type="text/html" title="The Art of Avoiding Online Arguments" /><published>2022-06-30T08:31:00+03:00</published><updated>2022-06-30T08:31:00+03:00</updated><id>https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments</id><content type="html" xml:base="https://collinsmuriuki.xyz/the-art-of-avoiding-online-arguments/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;In an age where the internet connects us more than ever, the temptation to engage in debates with strangers online is ever-present. Social media platforms, forums, and comment sections provide ample opportunities for discussions, but they can also be breeding grounds for heated arguments. While healthy debates can foster learning and understanding, arguing with strangers online often leads to unnecessary stress, frustration, and even hostility. In this blog post, we’ll explore why it’s wise to avoid getting entangled in online disputes, especially when it comes to topics you might be misinformed about, and how doing so can contribute to a more positive online experience.&lt;/p&gt;
 
@@ -24,80 +24,64 @@
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;Choosing to avoid arguments with strangers online, especially on topics you are misinformed about, is a wise decision. Embracing diverse perspectives, acknowledging the limitations of digital communication, safeguarding your emotional well-being, and redirecting your energy towards positive interactions are key steps in cultivating a harmonious online experience. Remember, fostering understanding and empathy, coupled with informed discussions, can go a long way in creating a more inclusive and supportive digital environment for everyone.&lt;/p&gt;</content><author><name>collinsmuriuki</name></author><category term="blog" /><category term="the internet" /><summary type="html">Introduction</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://collinsmuriuki.xyz/assets/images/keyboard-warrior.webp" /><media:content medium="image" url="https://collinsmuriuki.xyz/assets/images/keyboard-warrior.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Building a Web Assembly powered password generator</title><link href="https://collinsmuriuki.xyz/wasm-tutorial/" rel="alternate" type="text/html" title="Building a Web Assembly powered password generator" /><published>2020-10-24T22:44:00+03:00</published><updated>2020-10-24T22:44:00+03:00</updated><id>https://collinsmuriuki.xyz/wasm-tutorial</id><content type="html" xml:base="https://collinsmuriuki.xyz/wasm-tutorial/">&lt;p&gt;In this tutorial, we will be building a simple npm package with Rust and Web Assembly and testing it out on a React application.&lt;/p&gt;
+&lt;p&gt;Choosing to avoid arguments with strangers online, especially on topics you are misinformed about, is a wise decision. Embracing diverse perspectives, acknowledging the limitations of digital communication, safeguarding your emotional well-being, and redirecting your energy towards positive interactions are key steps in cultivating a harmonious online experience. Remember, fostering understanding and empathy, coupled with informed discussions, can go a long way in creating a more inclusive and supportive digital environment for everyone.&lt;/p&gt;</content><author><name>collinsmuriuki</name></author><category term="blog" /><category term="the internet" /><summary type="html">Introduction</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://collinsmuriuki.xyz/assets/images/keyboard-warrior.webp" /><media:content medium="image" url="https://collinsmuriuki.xyz/assets/images/keyboard-warrior.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Building a Web Assembly powered password generator</title><link href="https://collinsmuriuki.xyz/wasm-tutorial/" rel="alternate" type="text/html" title="Building a Web Assembly powered password generator" /><published>2020-10-24T22:44:00+03:00</published><updated>2020-10-24T22:44:00+03:00</updated><id>https://collinsmuriuki.xyz/wasm-tutorial</id><content type="html" xml:base="https://collinsmuriuki.xyz/wasm-tutorial/">&lt;h1 id=&quot;building-a-web-assembly-powered-password-generator-with-rust-and-react&quot;&gt;Building a Web Assembly-powered Password Generator with Rust and React&lt;/h1&gt;
 
-&lt;h2 id=&quot;some-context&quot;&gt;Some context&lt;/h2&gt;
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;Over the past few years, a popular trend in web development is emerging where developers write code in low level languages and compile it to a format that can be executed on the browser alongside JavaScript. That’s the high-level concept behind Web Assembly.&lt;/p&gt;
+&lt;p&gt;In this tutorial, we will explore the fascinating intersection of Rust, Web Assembly (Wasm), and React by building a simple password generator. We’ll leverage the speed and performance benefits of Rust, compile it into Wasm, and seamlessly integrate it into a React application. By the end of this project, you’ll have a clear understanding of how these technologies work together.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;But What exactly is it and why use the Rust programming language?&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h2 id=&quot;why-rust-and-web-assembly&quot;&gt;Why Rust and Web Assembly?&lt;/h2&gt;
 
-&lt;p&gt;Web Assembly (wasm) is a simple machine model and executable format with an extensive specification. It is designed to be portable, compact and execute at or near native speeds and is a compilation target for languages such as Rust, C, C++ and more.&lt;/p&gt;
-
-&lt;p&gt;Rust, on the other hand, is a blazingly fast systems language which gives developers low-level control and reliable performance. It lacks a garbage collector which slows down high-level languages like JavaScript.&lt;/p&gt;
-
-&lt;p&gt;The benefit of using Rust with Web Assembly is just how simple the developer experience is! Integration with and support for popular tools in the JavaScript ecosystem such as npm and web-pack make it very developer friendly.&lt;/p&gt;
-
-&lt;p&gt;To demonstrate this, we will be building a simple password generator program in Rust, compiling that code into Web Assembly and publishing the resulting package to npm to be used by other developers. As a bonus, we will also be creating a bear-bones React application which will make use of our package. By the end of this project, the interplay between these technologies will be vivid.&lt;/p&gt;
+&lt;p&gt;Web Assembly is a low-level virtual machine that allows executing code at near-native speeds within web browsers. Rust, known for its speed and memory safety, is an ideal language for Wasm. Unlike high-level languages like JavaScript, Rust provides developers with low-level control and reliable performance, making it an excellent choice for Wasm.&lt;/p&gt;
 
 &lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
 
+&lt;p&gt;Before we dive into the project, ensure you have the following tools and knowledge:&lt;/p&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Rust and Cargo: Cargo is Rust’s package manager and build tool, sort of what npm is to Node. You can install both by following this &lt;a href=&quot;https://www.rust-lang.org/tools/install&quot;&gt;link&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;wasm-pack: This is the one-stop shop tool for building and working with rust-generated Web Assembly, will definitely save us from writing a lot of boiler-plate code and potentially running into bugs. You can install by following this &lt;a href=&quot;https://rustwasm.github.io/wasm-pack/installer/&quot;&gt;link&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;A &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;node.js&lt;/a&gt;) installation&lt;/li&gt;
-  &lt;li&gt;Some Rust and JavaScript/ React.js knowledge will be a plus&lt;/li&gt;
+  &lt;li&gt;Rust and Cargo: Install them using &lt;a href=&quot;https://www.rust-lang.org/tools/install&quot;&gt;this link&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;wasm-pack: A tool for building and working with Rust-generated Web Assembly. Install it &lt;a href=&quot;https://rustwasm.github.io/wasm-pack/installer/&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Node.js: Required for React development. Install it from &lt;a href=&quot;https://nodejs.org/en/&quot;&gt;nodejs.org&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Basic knowledge of Rust and JavaScript/React.js.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;initializing-our-rust-project-with-wasm-pack&quot;&gt;Initializing our Rust project with wasm-pack&lt;/h2&gt;
+&lt;h2 id=&quot;initializing-the-rust-project&quot;&gt;Initializing the Rust Project&lt;/h2&gt;
 
-&lt;p&gt;Starting a Rust Web Assembly project is as simple as running the following command in your terminal:&lt;/p&gt;
+&lt;p&gt;Let’s start by creating a new Rust Web Assembly project using the following command:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wasm-pack new wasm_pass
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The outcome of running this is basically a Cargo generated Rust library crate with web-assembly batteries included. This means we are still able to add external crates/ libraries into the generated project, something we will get to later on.&lt;/p&gt;
+&lt;p&gt;This command generates a Rust library crate with Web Assembly support. The crucial files are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cargo.toml&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/lib.rs&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/utils.rs&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;dissecting-the-boilerplate&quot;&gt;Dissecting the boilerplate&lt;/h2&gt;
+&lt;h2 id=&quot;dissecting-the-boilerplate&quot;&gt;Dissecting the Boilerplate&lt;/h2&gt;
 
-&lt;p&gt;Let’s enter into our project and see what we have:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;wasm_pass
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Below is the file tree of our generated project; the most important files we will focus on are the Cargo.toml and src/lib.rs:&lt;/p&gt;
+&lt;p&gt;Explore the generated project structure:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wasm_pass/
 ├── Cargo.toml
 ├── LICENSE_APACHE
 ├── LICENSE_MIT
 ├── README.md
-    └── src
-        ├── lib.rs
-        └── utils.rs
+└── src
+    ├── lib.rs
+    └── utils.rs
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;em&gt;src/Cargo.toml&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Cargo.toml&lt;/strong&gt;: Contains project dependencies and metadata.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;lib.rs&lt;/strong&gt;: The root of the crate, compiled into Web Assembly.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;utils.rs&lt;/strong&gt;: Includes debugging utilities (not used in this project).&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;The Cargo.toml file contains the dependencies of our project as well as metadata for our crate. Since our crate was generated by wasm-pack, we get wasm-bindgen already preconfigured for us.&lt;/p&gt;
+&lt;h2 id=&quot;initial-build&quot;&gt;Initial Build&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;src/lib.rs&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Build the project using:&lt;/p&gt;
 
-&lt;p&gt;This is root of our crate which will be ultimately compiled to Web Assembly. The preconfigured wasm_bindgen crate allows us to interface our Rust code with JavaScript by simply adding the #[wasm_bindgen] attribute to any Rust code we would like to expose to JavaScript. The existing code imports the window.alert JavaScript function and exports a greet function.&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wasm-pack build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;em&gt;src/utils.rs&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This module contains some useful debugging utilities for our compiled Web Assembly, we won’t be making use of this module during this project.&lt;/p&gt;
-
-&lt;h2 id=&quot;initial-build&quot;&gt;Initial build&lt;/h2&gt;
-
-&lt;p&gt;To get a better understanding of how we compile our Rust code to Web Assembly and have it exposed to JavScript, we will first build the example Rust code generated by wasm-pack and see what we get:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;wasm-pack build&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;When this is complete, you you should expect a pkg directory to be generated at the root of our project with the following build artefacts inside:&lt;/p&gt;
+&lt;p&gt;This creates a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pkg&lt;/code&gt; directory with the following artifacts:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pkg/
 ├── package.json
@@ -107,75 +91,20 @@
 └── wasm_pass.js
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;wasm-pack does a great job at bundling our resulting artefacts into a “npm publishable” state as you can see. The README.md is simply a copy of our main project’s README.md. Let’s break down the rest of the files in more detail.&lt;/p&gt;
+&lt;p&gt;These files enable npm integration and contain the compiled Web Assembly code.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;pkg/wasm_pass.wasm&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;writing-rust-code&quot;&gt;Writing Rust Code&lt;/h2&gt;
 
-&lt;p&gt;This is the Web Assembly binary generated by the Rust compiler from our code in src/lib.rs. It simply contains all our Rust functions we had wrapped with the #[wasm_bindgen] attribute compiled to wasm!&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;pkg/wasm_pass.js&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This file is generated by wasm-bindgen and contains JavaScript code which acts as the intermediary between JavaScript and Rust by allowing importation of DOM and JavaScript functions into Rust and creating a JavaScript friendly API from our web assembly functions.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;wasm&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./wasm_pass_bg’;
-
-// …
-
-export function greet() {
-    return wasm.greet();
-}
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;pkg/wasm_pass.d.ts&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The .d.ts contains TypeScript type declarations for those who will be using TypeScript. Therefore, calls to our Web Assembly code will be type-checked and you will get nice features such as intellisense and auto-completion depending on the IDE you use.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;pkg/package.json&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;The package.json file contains meta-data about the generated JavaScript and WebAssembly package. This helps integrate with JavaScript tooling and allow us to publish our package to npm.&lt;/p&gt;
-
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wasm-pass&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;collaborators&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Your Name &amp;lt;your.email@example.com&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0.1.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;files&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wasm_pass_bg.wasm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wasm_pass.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wasm_pass.d.ts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;module&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wasm_pass.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;types&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wasm_pass.d.ts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;sideEffects&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;writing-some-rust&quot;&gt;Writing some Rust&lt;/h1&gt;
-
-&lt;h2 id=&quot;adding-an-external-crate&quot;&gt;Adding an external crate&lt;/h2&gt;
-
-&lt;p&gt;First thing we want to do first is add an external crate to our project.&lt;/p&gt;
-
-&lt;p&gt;Installing external libraries or crates, as they are referred to in the Rust community, is as easy as specifying the name and version of the library we would like to use under the dependencies column of our Cargo.toml like so:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Cargo.toml&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Update the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cargo.toml&lt;/code&gt; file to include the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rand&lt;/code&gt; crate:&lt;/p&gt;
 
 &lt;div class=&quot;language-toml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;[dependencies]&lt;/span&gt;
 &lt;span class=&quot;py&quot;&gt;wasm-bindgen&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;0.2.63&quot;&lt;/span&gt;
 &lt;span class=&quot;nn&quot;&gt;rand&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;0.7.3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;features&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;[&quot;wasm-bindgen&quot;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Here we add the rand crate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;version = &quot;0.7.3&quot;&lt;/code&gt; to our dependencies.&lt;/p&gt;
+&lt;p&gt;This adds the random number generation utility to our project. Run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cargo build&lt;/code&gt; to download the new dependency.&lt;/p&gt;
 
-&lt;p&gt;We also include a feature flag; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;features=[&quot;wasm-bindgen&quot;]&lt;/code&gt; in order to get a version of the rand crate which is can be compiled into Web Assembly.&lt;/p&gt;
-
-&lt;p&gt;The rand crate provides utilities to generate random numbers and convert them to useful types, we will be making use of this in our password generator program.&lt;/p&gt;
-
-&lt;p&gt;Lets build our project to download our newly added external crate.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cargo build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;implementing-our-password-generator-logic&quot;&gt;Implementing our password generator logic&lt;/h2&gt;
-
-&lt;p&gt;Now that we have the rand crate installed, we can bring it into the scope of our code in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/lib.rs&lt;/code&gt;. All functionality provided by the crate will be accessible through the crate’s name, in this case rand. We are particularly interested in the Rng trait provided by the crate, we can access it by bringing it into scope using the use keyword:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;src/lib.rs&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Implement the password generator logic in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/lib.rs&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;language-rust highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;wasm_bindgen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;prelude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rng&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -198,261 +127,58 @@ export function greet() {
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;To make keep things clean, I have deleted a lot of the default code generated by wasm-pack since we won’t be needing it any more. I also added a public generate function which takes a single argument &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;len&lt;/code&gt; of type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;usize&lt;/code&gt; and returns a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This function generates a random password of the specified length using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rand&lt;/code&gt; crate.&lt;/p&gt;
 
-&lt;p&gt;If you are unfamiliar with the Rust syntax, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;usize&lt;/code&gt; is an unsigned integer type which counts how many bytes it takes to reference a location in memory.&lt;/p&gt;
+&lt;h2 id=&quot;testing-the-code&quot;&gt;Testing the Code&lt;/h2&gt;
 
-&lt;p&gt;Inside our function we create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHARSET&lt;/code&gt; constant of type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;[u8]&lt;/code&gt;, simply a reference to an array of unsigned 8bit integers. In Rust, u8 integers can store numbers from 0 to 2^8 - 1, which is bascally numbers from 0 to 255. We set the value of this constant as a string slice of letters and symbols converted to a byte array through calling the method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;as_bytes&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Write a test for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generate&lt;/code&gt; function in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/lib.rs&lt;/code&gt;:&lt;/p&gt;
 
-&lt;p&gt;We create a mutable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rng&lt;/code&gt; variable where we make use of the rand crate’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;thread_rng&lt;/code&gt; function to create our random number generator, an instance of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ThreadRng&lt;/code&gt; struct, which contains useful methods that generate random numbers for us. We then create a password variable and annotate it’s type as a String, what we expect as the final outcome of this operation.&lt;/p&gt;
-
-&lt;p&gt;We then make use of Rust’s functional programming features by calling the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;map&lt;/code&gt; method on a range of numbers between 0 and the user provided len value. For each number within this range, we call a closure where we declare a variable idx which contains a random generated number between 0 and the length of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHARSET&lt;/code&gt; byte array, through calling the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gen_range&lt;/code&gt; method. The closure returns the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;u8&lt;/code&gt; integer at the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;idx&lt;/code&gt; index of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHARSET&lt;/code&gt; byte array type casted to a char type.&lt;/p&gt;
-
-&lt;p&gt;We finally call the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;collect&lt;/code&gt; method to transform the output from the iterator into a collection, which is a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;String&lt;/code&gt; in this case. This is what we eventually return from our function.&lt;/p&gt;
-
-&lt;h2 id=&quot;testing-our-code&quot;&gt;Testing our code&lt;/h2&gt;
-
-&lt;p&gt;It is always best practice to test code before we ship it, let’s go ahead and write a simple unit-test for our generate function. Feel free to delete the default tests/ directory generated by wasm-pack at this point since it is redundant to us now.&lt;/p&gt;
-
-&lt;p&gt;We will write our tests in the same module where our generate function is declared, a popular convention in Rust:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;src/lib.rs&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-rust highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;//...our function&lt;/span&gt;
-
-&lt;span class=&quot;nd&quot;&gt;#[cfg(test)]&lt;/span&gt;
+&lt;div class=&quot;language-rust highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;#[cfg(test)]&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tests&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
     &lt;span class=&quot;nd&quot;&gt;#[test]&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;fn&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nd&quot;&gt;println!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
         &lt;span class=&quot;nd&quot;&gt;assert_eq!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;.len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We first create a tests module using the mod keyword and use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#[cfg(test)]&lt;/code&gt; attribute to basically to have this module only compiled when we run tests. Inside the module, we import our generate function from the outer scope.&lt;/p&gt;
-
-&lt;p&gt;We write a test function test_generate, which we mark with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#[test]&lt;/code&gt; attribute to inform the test runner to treat this function as a test. Inside our function, we declare a password variable which we assign to the result of a call to our generate function, where we pass 20 as a parameter, since we want to generate a password with twenty characters.&lt;/p&gt;
-
-&lt;p&gt;We then write a print statement with Rust’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;println!&lt;/code&gt; macro so we can see our generated password printed on the standard output. Finally, we use another Rust macro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert_eq!&lt;/code&gt; to assert that the length of the password which is generated by our function is equal to 20.&lt;/p&gt;
-
-&lt;h2 id=&quot;now-we-can-run-our-tests&quot;&gt;Now we can run our tests:&lt;/h2&gt;
+&lt;p&gt;Run the tests with:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cargo &lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--show-output&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Note that we add the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--show-output flag&lt;/code&gt;, in order to be able to see what is printed into the standard output as our tests run.&lt;/p&gt;
+&lt;p&gt;Ensure the tests pass, confirming the functionality of the password generator.&lt;/p&gt;
 
-&lt;p&gt;When we run the tests, we should see the following output:&lt;/p&gt;
+&lt;h2 id=&quot;implementing-web-assembly-in-a-react-app&quot;&gt;Implementing Web Assembly in a React App&lt;/h2&gt;
 
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;running 1 &lt;span class=&quot;nb&quot;&gt;test
-
-test &lt;/span&gt;tests::test_generate ... ok
-
-successes:
-
-&lt;span class=&quot;nt&quot;&gt;----&lt;/span&gt; tests::test_generate stdout &lt;span class=&quot;nt&quot;&gt;----&lt;/span&gt;
-
-ZCoNq~!WT7V#AmL9GvmP
-
-successes:
-
-tests::test_generate
-
-&lt;span class=&quot;nb&quot;&gt;test &lt;/span&gt;result: ok. 1 passed&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 0 failed&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 0 ignored&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 0 measured&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 0 filtered out
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Our tests are successful! We are also able to see our random password printed out on the standard output! Now we can compile our Rust code into Web Assembly by running our trusty build command yet again:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wasm-pack build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;note&quot;&gt;Note!&lt;/h2&gt;
-
-&lt;p&gt;Incase you run into an error message reminding you to disable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wasm-opt&lt;/code&gt; while attempting to compile your code, you can fix it by updating your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cargo.toml&lt;/code&gt; with the following:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Cargo.toml&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-toml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;[package.metadata.wasm-pack.profile.release]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;wasm-opt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This will disable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wasm-pack&lt;/code&gt; Web Assembly optimization for the release profile, which is tolerable for our simple project.&lt;/p&gt;
-
-&lt;p&gt;You can then proceed to build your package again.&lt;/p&gt;
-
-&lt;h2 id=&quot;implementing-web-assembly-on-a-react-application&quot;&gt;Implementing Web Assembly on a React application&lt;/h2&gt;
-
-&lt;p&gt;We are now going to try out our new package on a bare-bones React application to see the integration of Web Assembly and modern front-end technologies at play.&lt;/p&gt;
-
-&lt;p&gt;In the root of our main project, we will first create a app directory, which will contain our React application, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cd&lt;/code&gt; into it.&lt;/p&gt;
+&lt;p&gt;Create a React app in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app&lt;/code&gt; directory:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;app
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;app
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Inside, we will create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src&lt;/code&gt; directory and we also create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.gitignore&lt;/code&gt; file with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; inside:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;src
+&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;src
 &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/node_modules&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; .gitignore
+npm init &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We then initialize an npm package with default options by running:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm init &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Next, we install React, Babel, webpack and &lt;em&gt;a few&lt;/em&gt; other webpack plugins:&lt;/p&gt;
+&lt;p&gt;Install necessary dependencies:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--save&lt;/span&gt; react react-dom
-
 npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--save-dev&lt;/span&gt; @babel/core @babel/preset-env @babel/preset-react babel-loader webpack webpack-cli webpack-dev-server html-webpack-plugin style-loader css-loader html-loader
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;We then create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file at the root of our app directory and add the following:&lt;/p&gt;
+&lt;p&gt;Create the React app files: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App.js&lt;/code&gt;. Configure Babel with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.babelrc&lt;/code&gt; and Webpack with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;app/index.html&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1.0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ie=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;wasm-pass&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'root'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In the src directory, we add an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt;, which will serve as the entry point to our React application:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;app/src/index.js&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react-dom&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./App.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;ReactDOM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We will also need to create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App.js&lt;/code&gt; file in the src directory which will contain our App component:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;app/src/App.js&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h1&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now we can create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.babelrc&lt;/code&gt; file at the root of our app directory:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;app/.babelrc&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;presets&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@babel/preset-env&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@babel/preset-react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We proceed to add a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; file also at the root of our app directory (don’t worry too much about it’s content):&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;app/webpack.config.js&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HtmlWebpackPlugin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;html-webpack-plugin&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./src/index.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;__dirname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;index.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;rules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;js|jsx&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;na&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/node_modules/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;na&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;na&quot;&gt;loader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;babel-loader&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;css$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;na&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;style-loader&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;css-loader&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;ss$/i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;na&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;style-loader&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;css-loader&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;na&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;html$/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;na&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;na&quot;&gt;loader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;html-loader&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;development&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HtmlWebpackPlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./index.html&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Finally, we add a start and build script to our package.json&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;app/package.json&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack-dev-server --open&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack --config webpack.config.js&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We can start our webpack server by running:&lt;/p&gt;
+&lt;p&gt;Finally, run the development server:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm start
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Our React app is now running on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080&lt;/code&gt;!&lt;/p&gt;
+&lt;h2 id=&quot;using-the-package-in-react&quot;&gt;Using the Package in React&lt;/h2&gt;
 
-&lt;h2 id=&quot;using-our-package&quot;&gt;Using our package&lt;/h2&gt;
-
-&lt;p&gt;Now that we have our React app working, we can test our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wasm-pass&lt;/code&gt; package inside it. To avoid any conflicts in the name you chose for your npm package, we will use the local package in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pkg&lt;/code&gt; directory instead. We add it as a dependency in our package.json like so:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;app/package.json&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;//...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;dependencies&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;wasm-pass&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file:../pkg/wasm_pass&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Since we are importing our package locally, we set the version as a file referencing the location of our wasm-pack generated &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pkg&lt;/code&gt; directory content.&lt;/p&gt;
-
-&lt;p&gt;Finally, run npm install to have it saved in our node_modules:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Let’s now update our App component:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;app/src/App.js&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Update the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App.js&lt;/code&gt; file to use the Rust-generated Web Assembly package:&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useCallback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useEffect&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -476,6 +202,7 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
     &lt;span class=&quot;nx&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;generatePassword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
             &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Enter&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;password&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/p&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
@@ -490,49 +217,21 @@ npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;There are a couple of important changes in this file. First, we import the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useState&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useCallback&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; hooks from react for simple state management, memoization and performing of side effects.&lt;/p&gt;
-
-&lt;p&gt;This component also contains an input field for entering the desired length of the password and a button whose click event is handled by our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generatePassword&lt;/code&gt; callback.&lt;/p&gt;
-
-&lt;p&gt;We create our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generatePassword&lt;/code&gt; callback using React’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useCallback&lt;/code&gt; hook to memoize the password generation logic from web assembly with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt; state value as our dependency. We also import our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wasm-pass&lt;/code&gt; package here. Notice how we use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import&lt;/code&gt; function rather than the regular ES6 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import&lt;/code&gt; syntax. This is because currently, web assembly can only be loaded dynamically by the browser. This import function will return a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Promise&lt;/code&gt;, therefore to gain access to our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wasm-pass&lt;/code&gt; module, we use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Promise.then&lt;/code&gt; syntax. We &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alert&lt;/code&gt; any error we catch.&lt;/p&gt;
-
-&lt;p&gt;Inside this callback, we call the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generate&lt;/code&gt; function from our wasm module which in turn updates the password state via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setPassword&lt;/code&gt;. We also call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;parseInt&lt;/code&gt; to cast our numeric string &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;input&lt;/code&gt; to a number.&lt;/p&gt;
-
-&lt;p&gt;Finally, we call the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;useEffect&lt;/code&gt; hook and subscribe to any changes to our input state, where we call our  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;generatePassword&lt;/code&gt; function as a side effect.&lt;/p&gt;
-
-&lt;p&gt;The final password is displayed in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;strong&lt;/code&gt; tag.&lt;/p&gt;
-
-&lt;p&gt;Let’s run our dev server once again and see what we get:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm start
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/collinsmuriuki/image/upload/v1607412908/working_5254a3d015.gif&quot; alt=&quot;working.gif&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Our simple password generator is working!&lt;/p&gt;
+&lt;p&gt;This React component allows users to input a password length, click a button, and receive a randomly generated password from the Rust Web Assembly package.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;There’s so much more we can do with Rust and Web Assembly, we have barely scratched the surface! This tutorial hopefully shows how we transition from Rust to JavaScript through Web Assembly, and how we can implement a Web Assembly generated npm package on a React application.&lt;/p&gt;
-
-&lt;p&gt;A full working implementation of this project can be found &lt;a href=&quot;https://wasm-pass.collinsmuriuki.xyz&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here are some good resources if you wish to learn more about Rust and Web Assembly:&lt;/p&gt;
+&lt;p&gt;This tutorial showcases the integration of Rust and Web Assembly in a React application, providing a powerful blend of performance and modern front-end technologies. Explore further resources to deepen your understanding of Rust and Web Assembly:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://doc.rust-lang.org/book/&quot;&gt;The Rust Book&lt;/a&gt; is the go to resource if you wish to familiarize yourself with the Rust programming language&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;For experienced Rust developers who would like to dip their toes into Web Assembly, consider checking out &lt;a href=&quot;https://rustwasm.github.io/docs/book/&quot;&gt;the rustwasm book&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://rustwasm.github.io/docs/wasm-bindgen/introduction.html&quot;&gt;wasm-bindgen&lt;/a&gt; is another awesome resource I recommend going through, the content is extensive with good working examples.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://wasmbyexample.dev/home.en-us.html&quot;&gt;Wasm by example&lt;/a&gt; and webassembly.org are also great resources for learning more about Web Assembly in general.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>collinsmuriuki</name></author><category term="blog" /><category term="rust" /><category term="wasm" /><category term="react.js" /><category term="javascript" /><summary type="html">In this tutorial, we will be building a simple npm package with Rust and Web Assembly and testing it out on a React application.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://collinsmuriuki.xyz/assets/images/rust-ferris.jpeg" /><media:content medium="image" url="https://collinsmuriuki.xyz/assets/images/rust-ferris.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to squeeze out extra memory for your Node.js application</title><link href="https://collinsmuriuki.xyz/node-memory/" rel="alternate" type="text/html" title="How to squeeze out extra memory for your Node.js application" /><published>2018-05-23T19:00:00+03:00</published><updated>2018-05-23T19:00:00+03:00</updated><id>https://collinsmuriuki.xyz/node-memory</id><content type="html" xml:base="https://collinsmuriuki.xyz/node-memory/">&lt;p&gt;If you’re constantly building and shipping apps with Node.js, there’s a likelihood that you may run into the dreaded &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed&lt;/code&gt;. This error kills the current process hence killing your server.&lt;/p&gt;
+  &lt;li&gt;&lt;a href=&quot;https://doc.rust-lang.org/book/&quot;&gt;The Rust Book&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rustwasm.github.io/docs/book/&quot;&gt;Rust and Web Assembly Book&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rustwasm.github.io/docs/wasm-bindgen/introduction.html&quot;&gt;wasm-bindgen Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wasmbyexample.dev/home.en-us.html&quot;&gt;Wasm By Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://webassembly.org/&quot;&gt;WebAssembly.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check the &lt;a href=&quot;https://wasm-pass.collinsmuriuki.xyz&quot;&gt;full working implementation&lt;/a&gt; of this project for reference. Happy coding!&lt;/p&gt;</content><author><name>collinsmuriuki</name></author><category term="blog" /><category term="rust" /><category term="wasm" /><category term="react.js" /><category term="javascript" /><summary type="html">Building a Web Assembly-powered Password Generator with Rust and React</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://collinsmuriuki.xyz/assets/images/rust-ferris.jpeg" /><media:content medium="image" url="https://collinsmuriuki.xyz/assets/images/rust-ferris.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to squeeze out extra memory for your Node.js application</title><link href="https://collinsmuriuki.xyz/node-memory/" rel="alternate" type="text/html" title="How to squeeze out extra memory for your Node.js application" /><published>2018-05-23T19:00:00+03:00</published><updated>2018-05-23T19:00:00+03:00</updated><id>https://collinsmuriuki.xyz/node-memory</id><content type="html" xml:base="https://collinsmuriuki.xyz/node-memory/">&lt;p&gt;If you’re constantly building and shipping apps with Node.js, there’s a likelihood that you may run into the dreaded &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed&lt;/code&gt;. This error kills the current process hence killing your server.&lt;/p&gt;
 
 &lt;p&gt;This is expected if your server is performing memory intensive tasks such as transferring huge amounts of data with limited underlying resources.&lt;/p&gt;
 
