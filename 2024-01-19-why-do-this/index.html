@@ -9,24 +9,22 @@
     <meta name=author content="Collins Muriuki">
 
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Optimizing Node.js Memory Allocation for High-Performance Applications | Collins Muriuki</title>
+<title>Collins Muriuki | Understanding the universe and explaining it to a three year old.</title>
 <meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="Optimizing Node.js Memory Allocation for High-Performance Applications" />
-<meta name="author" content="collinsmuriuki" />
+<meta property="og:title" content="Collins Muriuki" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Optimizing Node.js Memory Allocation for High-Performance Applications." />
-<meta property="og:description" content="Optimizing Node.js Memory Allocation for High-Performance Applications." />
-<link rel="canonical" href="https://collinsmuriuki.xyz/node-memory/" />
-<meta property="og:url" content="https://collinsmuriuki.xyz/node-memory/" />
+<meta name="description" content="Understanding the universe and explaining it to a three year old." />
+<meta property="og:description" content="Understanding the universe and explaining it to a three year old." />
+<link rel="canonical" href="https://collinsmuriuki.xyz/2024-01-19-why-do-this/" />
+<meta property="og:url" content="https://collinsmuriuki.xyz/2024-01-19-why-do-this/" />
 <meta property="og:site_name" content="Collins Muriuki" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-05-23T19:00:00+03:00" />
+<meta property="article:published_time" content="2024-01-31T17:39:08+03:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Optimizing Node.js Memory Allocation for High-Performance Applications" />
+<meta property="twitter:title" content="Collins Muriuki" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:creator" content="@collinsmuriuki" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"collinsmuriuki"},"dateModified":"2018-05-23T19:00:00+03:00","datePublished":"2018-05-23T19:00:00+03:00","description":"Optimizing Node.js Memory Allocation for High-Performance Applications.","headline":"Optimizing Node.js Memory Allocation for High-Performance Applications","mainEntityOfPage":{"@type":"WebPage","@id":"https://collinsmuriuki.xyz/node-memory/"},"url":"https://collinsmuriuki.xyz/node-memory/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-31T17:39:08+03:00","datePublished":"2024-01-31T17:39:08+03:00","description":"Understanding the universe and explaining it to a three year old.","headline":"Collins Muriuki","mainEntityOfPage":{"@type":"WebPage","@id":"https://collinsmuriuki.xyz/2024-01-19-why-do-this/"},"url":"https://collinsmuriuki.xyz/2024-01-19-why-do-this/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -52,7 +50,7 @@
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 
-    <link rel="canonical" href="https://collinsmuriuki.xyz/node-memory/">
+    <link rel="canonical" href="https://collinsmuriuki.xyz/2024-01-19-why-do-this/">
     <link rel="alternate" type="application/rss+xml" title="" href="https://collinsmuriuki.xyz/feed.xml" />
 
     <style>
@@ -455,7 +453,9 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
     <div class="wrapper-normal">
         
-            <div class="post">
+            
+                <div class="page ">
+            
         
 
             
@@ -497,15 +497,15 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
 
 
-<h1 class="title">Optimizing Node.js Memory Allocation for High-Performance Applications</h1>
+<h1 class="title"></h1>
 
 <span class="date">
-    <time datetime="23-05-2018">Wednesday. May 23, 2018</time>
+    <time datetime="31-01-2024">Wednesday. January 31, 2024</time>
      - <span class="reading-time" title="Estimated read time">
     
 
     
-        2 mins
+        1 min
     
 </span>
 
@@ -514,75 +514,16 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
     <div class="post-tags">
         
-            <a class="item" href="https://collinsmuriuki.xyz/tags/#node">node</a>
-        
-            <a class="item" href="https://collinsmuriuki.xyz/tags/#javascript">javascript</a>
-        
     </div>
 
 
-<p>Title: Optimizing Node.js Memory Allocation for High-Performance Applications</p>
+<p>Ego on display,
+Faces grace each project’s tale,
+Public trust at stake.</p>
 
-<h2 id="introduction">Introduction</h2>
-
-<p>If you’re frequently developing and deploying Node.js applications, encountering the infamous <code class="language-plaintext highlighter-rouge">FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed</code> error is not uncommon. This issue arises particularly when your server engages in memory-intensive tasks, such as handling large data transfers with limited system resources.</p>
-
-<h2 id="understanding-the-v8-engine">Understanding the V8 Engine</h2>
-
-<p>Node.js relies on Google’s V8 engine, an open-source, high-performance JavaScript and WebAssembly engine written in C++. Integrated into both Chrome and Node.js, V8 implements ECMAScript and WebAssembly and caters to various operating systems and processor architectures.</p>
-
-<p>When a Node.js process begins, V8 allocates a specific amount of memory based on your hardware specifications. Monitoring and managing this allocated memory is crucial, especially when dealing with resource-demanding applications.</p>
-
-<h2 id="checking-allocated-memory">Checking Allocated Memory</h2>
-
-<p>To gain insights into your process’s allocated memory, create an <code class="language-plaintext highlighter-rouge">index.js</code> script with the following code:</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">v8</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">v8</span><span class="dl">"</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">totalHeapSize</span> <span class="o">=</span> <span class="nx">v8</span><span class="p">.</span><span class="nx">getHeapStatistics</span><span class="p">().</span><span class="nx">total_available_size</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">totalHeapSizeInGB</span> <span class="o">=</span> <span class="p">(</span><span class="nx">totalHeapSize</span> <span class="o">/</span> <span class="mi">1024</span> <span class="o">/</span> <span class="mi">1024</span> <span class="o">/</span> <span class="mi">1024</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
-    <span class="s2">`Total Heap Size is </span><span class="p">${</span><span class="nx">totalHeapSize</span><span class="p">}</span><span class="s2"> bytes`</span><span class="p">,</span>
-    <span class="s2">`</span><span class="p">${</span><span class="nx">totalHeapSizeInGB</span><span class="p">}</span><span class="s2"> GB`</span>
-<span class="p">);</span>
-</code></pre></div></div>
-
-<p>This script utilizes the <code class="language-plaintext highlighter-rouge">v8</code> module, an integral part of Node.js, offering methods like <code class="language-plaintext highlighter-rouge">v8.getHeapStatistics()</code> to fetch heap-related memory information. For a deeper understanding of process memory, refer to <a href="https://www.guru99.com/stack-vs-heap.html">this resource</a>.</p>
-
-<h3 id="adjusting-memory-capacity">Adjusting Memory Capacity</h3>
-
-<p>You can increase the memory capacity by using the <code class="language-plaintext highlighter-rouge">--max-old-space-size</code> argument when running your script, specifying the desired memory allocation in kilobytes:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node <span class="nt">--max-old-space-size</span><span class="o">=</span>4096 index.js
-</code></pre></div></div>
-
-<p>Upon rerunning the script, you should observe an augmented total heap size:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Total Heap Size is 4283117000,   GB 3.99
-</code></pre></div></div>
-
-<p>In this example, the memory has been doubled, providing more breathing room for your processes.</p>
-
-<h2 id="important-considerations">Important Considerations</h2>
-
-<p>Before adjusting memory allocation, ensure you have sufficient free memory. Attempting to allocate more memory than available on your system is counterproductive.</p>
-
-<p>Moreover, prioritize refactoring your code for better memory efficiency as a primary strategy before resorting to memory allocation adjustments.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Optimizing memory allocation is a key aspect of maintaining high-performance Node.js applications. By understanding the V8 engine’s role and implementing judicious memory adjustments, you can enhance your application’s stability and responsiveness. Always balance these optimizations with efficient code practices to achieve optimal results.</p>
+<p>Source: <a href="https://www.citizen.digital/news/governor-wavinya-ndeti-launched-a-free-milk-program-but-everyones-asking-whys-her-photo-on-the-box-n335103">Governor Wavinya Ndeti Launched A Free Milk Program But Everyone’s Asking, ‘Why’s Her Photo On The Box?’</a></p>
 
 
-
-    <div class="blog-navigation">
-        
-            <a class="prev"></a>
-        
-        
-            <a class="next" href="https://collinsmuriuki.xyz/wasm-tutorial/">Building a Web Assembly powered password generator &raquo;</a>
-        
-    </div>
 
 
 
@@ -595,68 +536,26 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
         
         
             
-                
+        
+    
+        
+        
             
-                
+        
+            
+        
+            
+        
             
         
     
         
         
             
-                
-            
-                
-            
         
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-                    
-                    <h4>Related Posts</h4>
-                    <ul>
-                    
-                    <li class="relatedPost">
-                        <a href="https://collinsmuriuki.xyz/wasm-tutorial/">Building a Web Assembly powered password generator
-                        
-                        </a>
-                    </li>
-                    
-                    
-                
             
         
     
-        
-        
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-        
-    
-    
-        </ul>
     
 </div>
 
@@ -667,21 +566,21 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
     <div class="toleft">
         <img
             class="selfie"
-            src="https://collinsmuriuki.xyz/assets/images/profile.jpg"
-            alt="Collins Muriuki"
+            src="https://collinsmuriuki.xyz/"
+            alt=""
         />
     </div>
 
     <div class="toright">
-        <h4 class="name">Collins Muriuki</h4>
-        <p class="bio">Understanding the universe and explaining it to a three year old.</p>
+        <h4 class="name"></h4>
+        <p class="bio"></p>
 
         <div class="share">
             <!-- Note: Only use three share links if your site width is set to large -->
             <!-- If site width is set to normal, you may choose any two share links -->
             <a
                 class="twitter"
-                href="https://twitter.com/intent/tweet?text=https://collinsmuriuki.xyz/node-memory/ - Optimizing Node.js Memory Allocation for High-Performance Applications by @c12i_"
+                href="https://twitter.com/intent/tweet?text=https://collinsmuriuki.xyz/2024-01-19-why-do-this/ -  by @"
             >
                 <svg class="icon icon-twitter">
                     <use xlink:href="#icon-twitter"></use></svg
@@ -698,11 +597,11 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
                 ><span class="icon-facebook-rect">Share</span>
             </a>
 
-            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://collinsmuriuki.xyz/node-memory/&amp;title=Optimizing Node.js Memory Allocation for High-Performance Applications&amp;summary=Optimizing Node.js Memory Allocation for High-Performance Applications.&amp;source=https://collinsmuriuki.xyz" target="_blank">
+            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://collinsmuriuki.xyz/2024-01-19-why-do-this/&amp;title=&amp;summary=&amp;source=https://collinsmuriuki.xyz" target="_blank">
                 <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg><span class="icon-linkedin">Share</span>
             </a> -->
 
-            <!-- <a class="reddit" href="https://reddit.com/submit?url=https://collinsmuriuki.xyz/node-memory/&amp;title=Optimizing Node.js Memory Allocation for High-Performance Applications" target="_blank">
+            <!-- <a class="reddit" href="https://reddit.com/submit?url=https://collinsmuriuki.xyz/2024-01-19-why-do-this/&amp;title=" target="_blank">
                 <svg class="icon icon-reddit"><use xlink:href="#icon-reddit"></use></svg><span class="icon-reddit">Share</span>
             </a> -->
         </div>
@@ -710,27 +609,6 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 </section>
 
 
-
-
-    <section class="disqus">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-
-        var disqus_config = function () {
-            this.page.url = 'https://collinsmuriuki.xyz/node-memory/';
-            this.page.identifier = '/node-memory';
-        };
-        var disqus_shortname = 'https-muriuki-dev';
-        var disqus_developer = 0;
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
 
 
 
