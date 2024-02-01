@@ -11,9 +11,6 @@ category: blog
 author: collinsmuriuki
 description: Optimizing Node.js Memory Allocation for High-Performance Applications.
 ---
-
-Title: Optimizing Node.js Memory Allocation for High-Performance Applications
-
 ## Introduction
 
 If you're frequently developing and deploying Node.js applications, encountering the infamous `FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed` error is not uncommon. This issue arises particularly when your server engages in memory-intensive tasks, such as handling large data transfers with limited system resources.
