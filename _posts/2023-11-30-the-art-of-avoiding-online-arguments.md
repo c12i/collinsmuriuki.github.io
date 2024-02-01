@@ -1,7 +1,7 @@
 ---
 title: "The Art of Avoiding Online Arguments"
 layout: post
-date: 2022-11-30 08:31
+date: 2023-11-30 08:31
 image: /assets/images/keyboard-warrior.webp
 headerImage: true
 tag:
