@@ -2,8 +2,8 @@
 title: "Exploring the Differences Between WebRTC Data Channels and WebSockets"
 layout: post
 date: 2024-03-02 08:31
-image: /assets/images/keyboard-warrior.webp
-headerImage: false
+image: /assets/images/string-telephone-ai-generated.jpeg
+headerImage: true
 tag:
     - javascript
     - browsers
