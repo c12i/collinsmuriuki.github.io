@@ -104,7 +104,7 @@ socket.onclose = () => {
 3. **Considerations for Both:**
    - **Network Topology:** Consider the network topology of your application. If a centralized server is already a fundamental part of your architecture, WebSocket may align better. For decentralized or peer-centric architectures, WebRTC Data Channel is more suitable.
 
-   - **Complexity and Development Time:** WebSocket might be a quicker and simpler option for straightforward applications, while WebRTC can offer more advanced features but may require additional development effort, especially when dealing with complex scenarios like NAT traversal.
+   - **Complexity and Development Time:** WebSocket might be a quicker and simpler option for straightforward applications, while WebRTC can offer more advanced features but may require additional development effort, especially when dealing with complex scenarios like [NAT traversal](https://en.wikipedia.org/wiki/NAT_traversal).
 
    - **Scalability:** WebSocket can be easier to scale since the central server can manage communication. WebRTC, being peer-to-peer, may require additional considerations for scaling, especially in large applications.
 
