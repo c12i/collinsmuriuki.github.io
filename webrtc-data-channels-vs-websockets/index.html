@@ -528,7 +528,7 @@ pre { box-sizing: border-box; margin: 0 0 1.75em 0; width: 100%; padding: 5px 10
 
 
 <h3 id="introduction">Introduction</h3>
-<p>WebRTC (Web Real-Time Communication) data channels and WebSockets are both powerful technologies that enable real-time communication between clients and servers to enable transfer of arbitrary data. However, they have distinct characteristics and use cases. In this blog post, we’ll delve into the key differences between WebRTC data channels and WebSockets, providing code snippets for better understanding.</p>
+<p>WebRTC (Web Real-Time Communication) <a href="https://web.dev/articles/webrtc-basics#rtcdatachannel_api">data channels</a> and <a href="https://en.wikipedia.org/wiki/WebSocket">WebSockets</a> are both powerful technologies that enable real-time communication between clients and servers (or other clients) to enable transfer of arbitrary data. However, they have distinct characteristics and use cases. In this blog post, we’ll delve into the key differences between WebRTC data channels and WebSockets, providing code snippets for better understanding.</p>
 
 <h3 id="webrtc-data-channels">WebRTC Data Channels</h3>
 
@@ -623,7 +623,7 @@ WebSockets are widely used in applications like chat applications, financial tra
       </li>
     </ul>
   </li>
-  <li><strong>Choose WebRTC Data Channel When:</strong>
+  <li><strong>Choose WebRTC Data Channels When:</strong>
     <ul>
       <li>
         <p><strong>Peer-to-Peer Communication:</strong> If your application requires direct communication between browsers without relying on a central server, WebRTC Data Channel is ideal. This is particularly useful for scenarios like video conferencing, collaborative tools, or file sharing where low-latency, peer-to-peer communication is crucial.</p>
