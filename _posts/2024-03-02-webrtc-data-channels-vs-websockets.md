@@ -21,13 +21,13 @@ WebRTC (Web Real-Time Communication) [data channels](https://web.dev/articles/we
 ### WebRTC Data Channels
 
 1. **Purpose:**
-   WebRTC data channels are specifically designed for peer-to-peer communication between browsers. They are a part of the larger WebRTC framework, primarily used for real-time data exchange. Some use cases of WebRTC data channels include file sharing and online collaboration tools.
+   WebRTC data channels are specifically designed for peer-to-peer communication between browsers. They are a part of the larger WebRTC framework, primarily used for real-time data exchange.
 
 2. **Peer-to-Peer Nature:**
    WebRTC data channels establish a direct connection between peers, allowing for efficient and low-latency communication without the need for a centralized server.
 
 3. **Browser Support:**
-   WebRTC data channels are supported by modern browsers, making them suitable for applications that require real-time communication, such as video conferencing, online gaming, and collaborative editing.
+   WebRTC data channels are supported by modern browsers, making them suitable for applications that require real-time communication, such as remote desktop apps, online gaming, real time text chats, collaborative editing or file transfer.
 
 **Creating a WebRTC Data Channel:**
 ```javascript
