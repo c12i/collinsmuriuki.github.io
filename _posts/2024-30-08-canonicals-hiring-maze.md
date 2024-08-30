@@ -73,7 +73,7 @@ So, here's the big question: Should you apply for a role at Canonical?
 
 Well, that depends. Are you up for an adventure? Do you have a few months to spare? Are you cool with digging up your old report cards? If you answered yes to all of these, then hey, why not give it a shot?
 
-But if you're looking for a quick and straightforward hiring process, or if you believe your recent work speaks louder than your high school GPA, you might want to think twice.
+But if you're looking for a quick and straightforward hiring process, or if you believe your recent work speaks louder than your high school grades, you might want to think twice.
 
 At the end of the day, it's all about what you're comfortable with. Canonical's process is unique, that's for sure. Whether it's uniquely good or uniquely frustrating – well, that's for you to decide.
 
