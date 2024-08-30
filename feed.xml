@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://collinsmuriuki.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://collinsmuriuki.xyz/" rel="alternate" type="text/html" /><updated>2024-08-30T13:32:36+03:00</updated><id>https://collinsmuriuki.xyz/feed.xml</id><title type="html">Collins Muriuki</title><subtitle>Understanding the universe and explaining it to a three year old.</subtitle><entry><title type="html">Canonical’s Hiring Maze: Adventure, Nightmare, or Endless Job Fair?</title><link href="https://collinsmuriuki.xyz/canonicals-hiring-maze/" rel="alternate" type="text/html" title="Canonical’s Hiring Maze: Adventure, Nightmare, or Endless Job Fair?" /><published>2024-08-30T09:45:00+03:00</published><updated>2024-08-30T09:45:00+03:00</updated><id>https://collinsmuriuki.xyz/canonicals-hiring-maze</id><content type="html" xml:base="https://collinsmuriuki.xyz/canonicals-hiring-maze/">&lt;h1 id=&quot;canonicals-hiring-maze-adventure-nightmare-or-endless-job-fair&quot;&gt;Canonical’s Hiring Maze: Adventure, Nightmare, or Endless Job Fair?&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://collinsmuriuki.xyz/feed.xml" rel="self" type="application/atom+xml" /><link href="https://collinsmuriuki.xyz/" rel="alternate" type="text/html" /><updated>2024-08-30T14:39:20+03:00</updated><id>https://collinsmuriuki.xyz/feed.xml</id><title type="html">Collins Muriuki</title><subtitle>Understanding the universe and explaining it to a three year old.</subtitle><entry><title type="html">Canonical’s Hiring Maze: Adventure, Nightmare, or Endless Job Fair?</title><link href="https://collinsmuriuki.xyz/canonicals-hiring-maze/" rel="alternate" type="text/html" title="Canonical’s Hiring Maze: Adventure, Nightmare, or Endless Job Fair?" /><published>2024-08-30T09:45:00+03:00</published><updated>2024-08-30T09:45:00+03:00</updated><id>https://collinsmuriuki.xyz/canonicals-hiring-maze</id><content type="html" xml:base="https://collinsmuriuki.xyz/canonicals-hiring-maze/">&lt;h1 id=&quot;canonicals-hiring-maze-adventure-nightmare-or-endless-job-fair&quot;&gt;Canonical’s Hiring Maze: Adventure, Nightmare, or Endless Job Fair?&lt;/h1&gt;
 
 &lt;p&gt;Ever thought about working for the company behind Ubuntu? Well, buckle up, because Canonical’s hiring process is quite the ride. And have you noticed how they always seem to have a ton of open positions? Let’s dive into what you might expect if you decide to throw your hat in the ring and explore why their job board looks like a never-ending buffet of opportunities.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-gauntlet-begins&quot;&gt;The Gauntlet Begins&lt;/h2&gt;
 
-&lt;p&gt;First things first: Canonical doesn’t do things by halves. Their hiring process is like the tech world’s version of an ultra-marathon. We’re talking about a journey that can last anywhere from 2 to 5 months. Yep, you read that right – months, not weeks &lt;a href=&quot;https://www.glassdoor.com/Interview/Canonical-Interview-Questions-E230560.htm&quot;&gt;[1]&lt;/a&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=37091081&quot;&gt;[6]&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;First things first: Canonical doesn’t do things by halves. Their hiring process is like the tech world’s version of an ultra-marathon. We’re talking about a journey that can last anywhere from 2 to 5 months. Yep, you read that right – months, not weeks &lt;a href=&quot;https://www.glassdoor.com/Interview/Canonical-Interview-Questions-E230560.htm&quot;&gt;[1]&lt;/a&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=36667863&quot;&gt;[6]&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here’s a taste of what you might encounter:&lt;/p&gt;
 
@@ -17,13 +17,12 @@
   &lt;li&gt;Presentations (time to dust off those public speaking skills)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;One HackerNews user reported spending “about 40-50 hours” over roughly two months in the process &lt;a href=&quot;https://news.ycombinator.com/item?id=37091081&quot;&gt;[6]&lt;/a&gt;. That’s basically a full work week just trying to get the job!&lt;/p&gt;
+&lt;p&gt;Multiple applicants have reported going through “months of tests, interviews”, with some even making it all the way to an interview with Mark Shuttleworth himself. One HackerNews user described the process as “relatively lengthy,” noting that by the time they reached the offer stage, they were already interviewing with other companies &lt;a href=&quot;https://news.ycombinator.com/item?id=36667863&quot;&gt;[6]&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-good-the-bad-and-the-high-school-grades&quot;&gt;The Good, The Bad, and The… High School Grades?&lt;/h2&gt;
 
-&lt;p&gt;Now, let’s talk about the elephant in the room – or should I say, the penguin? 🐧 Canonical seems to have a peculiar fascination with your academic past. And I’m not just talking about your college days. Nope, they want to know about your high school glory days too &lt;a href=&quot;https://www.reddit.com/r/linux/comments/thsrcp/this_was_the_first_stage_of_the_interview_process/&quot;&gt;[2]&lt;/a&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=37091081#37091250&quot;&gt;[7]&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Imagine this: You’re a seasoned dev with years of experience under your belt, and you’re asked about your high school math ranking. It’s like applying for a NASCAR race and being quizzed about your first bicycle. As one HackerNews commenter put it, “Who remembers their highschool activities unless they are relatively young? Is this a hidden way to quickly weed out older candidates?” &lt;a href=&quot;https://news.ycombinator.com/item?id=37091081#37091250&quot;&gt;[7]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now, let’s talk about the elephant in the room – or should I say, the penguin? 🐧 Canonical seems to have a peculiar fascination with your academic past. And I’m not just talking about your university days. Nope, they want to know about your high school glory days too &lt;a href=&quot;https://www.reddit.com/r/linux/comments/thsrcp/this_was_the_first_stage_of_the_interview_process/&quot;&gt;[2]&lt;/a&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=#36667863&quot;&gt;[6]&lt;/a&gt;.
+this: You’re a seasoned dev with years of experience under your belt, and you’re asked about your high school math ranking. It’s like applying for a F1 race and being quizzed about your first bicycle. As one HackerNews commenter put it, “…the interview only really focused on what I had done in high school. I graduated 36 years ago - I just don’t see the relevance…” &lt;a href=&quot;https://news.ycombinator.com/item?id=36667863&quot;&gt;[6]&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-mixed-bag-of-experiences&quot;&gt;The Mixed Bag of Experiences&lt;/h2&gt;
 
@@ -33,7 +32,7 @@
 
 &lt;h2 id=&quot;the-compensation-conundrum&quot;&gt;The Compensation Conundrum&lt;/h2&gt;
 
-&lt;p&gt;After all this, you’d expect a pot of gold at the end of the rainbow, right? Well, according to some reviews, Canonical’s compensation isn’t always competitive. Some candidates have reported being offered contractor positions with limited benefits &lt;a href=&quot;https://www.glassdoor.com/Interview/Canonical-Interview-Questions-E230560.htm&quot;&gt;[4]&lt;/a&gt;. One HackerNews user mentioned, “To mention, their salary ranges here in EU seems waaay out of touch, they want the top performers at lower level salary ranges and then get offended when you turn then down.” &lt;a href=&quot;https://news.ycombinator.com/item?id=37091081#37091211&quot;&gt;[8]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After all this, you’d expect a pot of gold at the end of the rainbow, right? Well, according to some reviews, Canonical’s compensation isn’t always competitive. Some candidates have reported being offered contractor positions with limited benefits &lt;a href=&quot;https://www.glassdoor.com/Interview/Canonical-Interview-Questions-E230560.htm&quot;&gt;[4]&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-perpetual-job-fair-why-so-many-open-roles&quot;&gt;The Perpetual Job Fair: Why So Many Open Roles?&lt;/h2&gt;
 
@@ -43,7 +42,7 @@
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;The Marathon Effect&lt;/strong&gt;: Remember that ultra-marathon hiring process we talked about? Well, it turns out that when you take 2-5 months to hire someone, positions tend to stay open for a while. It’s simple math – the longer the process, the more open roles you’ll see at any given time &lt;a href=&quot;https://www.glassdoor.com/Interview/Canonical-Interview-Questions-E230560.htm&quot;&gt;[1]&lt;/a&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=37091081&quot;&gt;[6]&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;The Marathon Effect&lt;/strong&gt;: Remember that ultra-marathon hiring process we talked about? Well, it turns out that when you take 2-5 months to hire someone, positions tend to stay open for a while. It’s simple math – the longer the process, the more open roles you’ll see at any given time &lt;a href=&quot;https://www.glassdoor.com/Interview/Canonical-Interview-Questions-E230560.htm&quot;&gt;[1]&lt;/a&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=36667863&quot;&gt;[6]&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;The Goldilocks Syndrome&lt;/strong&gt;: Some folks suggest that Canonical might be looking for candidates that are juuuust right. With their extensive testing and interview process, they might be setting the bar sky-high, making it tough to find the perfect fit &lt;a href=&quot;https://www.reddit.com/r/linux/comments/thsrcp/this_was_the_first_stage_of_the_interview_process/&quot;&gt;[2]&lt;/a&gt;.&lt;/p&gt;
@@ -55,7 +54,7 @@
     &lt;p&gt;&lt;strong&gt;The Growth Spurt Hypothesis&lt;/strong&gt;: On a more positive note, maybe Canonical is in a phase of rapid expansion. All those open roles could be a sign of a company that’s growing faster than it can hire &lt;a href=&quot;https://www.glassdoor.com/Interview/Canonical-Interview-Questions-E230560.htm&quot;&gt;[4]&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;The Fishing Expedition&lt;/strong&gt;: Here’s a spicy theory – some suggest that not all these jobs are real. There’s speculation that Canonical might be using job postings to gather industry insights or ideas. It’s a controversial idea, and definitely not confirmed, but it’s out there &lt;a href=&quot;https://www.glassdoor.com/Interview/Canonical-Interview-Questions-E230560.htm&quot;&gt;[5]&lt;/a&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=37091081#37091355&quot;&gt;[9]&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;The Fishing Expedition&lt;/strong&gt;: Here’s a spicy theory – some suggest that not all these jobs are real. There’s speculation that Canonical might be using job postings to gather industry insights or ideas. It’s a controversial idea, and definitely not confirmed, but it’s out there &lt;a href=&quot;https://www.glassdoor.com/Interview/Canonical-Interview-Questions-E230560.htm&quot;&gt;[5]&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -67,7 +66,7 @@
 
 &lt;p&gt;Well, that depends. Are you up for an adventure? Do you have a few months to spare? Are you cool with digging up your old report cards? If you answered yes to all of these, then hey, why not give it a shot?&lt;/p&gt;
 
-&lt;p&gt;But if you’re looking for a quick and straightforward hiring process, or if you believe your recent work speaks louder than your high school GPA, you might want to think twice. As one HackerNews user put it, “I don’t understand how they could reach out to me about the position and then basically make me BEG to get hired. And they don’t even pay top dollar. Crazy.” &lt;a href=&quot;https://news.ycombinator.com/item?id=37091081#37091355&quot;&gt;[10]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;But if you’re looking for a quick and straightforward hiring process, or if you believe your recent work speaks louder than your high school GPA, you might want to think twice.&lt;/p&gt;
 
 &lt;p&gt;At the end of the day, it’s all about what you’re comfortable with. Canonical’s process is unique, that’s for sure. Whether it’s uniquely good or uniquely frustrating – well, that’s for you to decide.&lt;/p&gt;
 
