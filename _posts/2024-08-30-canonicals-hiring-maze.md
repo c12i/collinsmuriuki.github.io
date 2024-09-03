@@ -10,7 +10,7 @@ tag:
     - canonical
     - ubuntu
     - software-engineering
-star: false
+star: true
 category: blog
 author: Collins Muriuki
 description: An in-depth look at Canonical's unique hiring process and why they always seem to have many open positions
